@@ -2,137 +2,208 @@
   width: 100%;
 }
 
-.earth-shell {
+.earth-view {
   min-height: 100vh;
-  background: #f7f3e8;
+  position: relative;
+  overflow: hidden;
   display: grid;
   place-items: center;
+  background: radial-gradient(circle at 50% 45%, #3a3f67 0%, #1d203d 44%, #0c1025 100%);
+  color: #f2efe4;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.55), transparent 60%),
+    radial-gradient(1.6px 1.6px at 77% 65%, rgba(255, 255, 255, 0.45), transparent 60%),
+    radial-gradient(1.4px 1.4px at 64% 18%, rgba(255, 255, 255, 0.45), transparent 60%),
+    radial-gradient(1.6px 1.6px at 35% 77%, rgba(255, 255, 255, 0.42), transparent 60%),
+    radial-gradient(1.4px 1.4px at 89% 24%, rgba(255, 255, 255, 0.36), transparent 60%);
+  opacity: 0.8;
+}
+
+.hint-card {
+  position: absolute;
+  top: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(239, 236, 228, 0.94);
+  color: #4a4336;
+  border-radius: 14px;
+  padding: 0.7rem 1.2rem;
+  text-align: center;
+  z-index: 3;
+  box-shadow: 0 8px 22px rgba(10, 10, 18, 0.28);
+}
+
+.hint-card h1 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.hint-card p {
+  margin: 0.1rem 0 0;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.globe-wrap {
   position: relative;
+  width: min(76vw, 760px);
+  aspect-ratio: 1;
+  z-index: 2;
+}
+
+.glow {
+  position: absolute;
+  inset: -5%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 249, 225, 0.95) 0%, rgba(255, 246, 210, 0.45) 52%, rgba(255, 255, 255, 0.03) 72%);
+}
+
+.globe {
+  position: absolute;
+  inset: 7%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 45% 33%, #edeceb 0%, #d8d7d6 42%, #b6b4b4 100%);
+  box-shadow: inset -20px -24px 50px rgba(74, 74, 78, 0.38);
   overflow: hidden;
 }
 
-.loading-panel {
-  text-align: center;
-  color: #6a6353;
-  transform: translateY(-14vh);
+.latitude-lines,
+.longitude-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
 }
 
-.spinner-wrap {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 0.85rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(220, 190, 113, 0.13);
+.latitude-lines {
+  background: repeating-linear-gradient(to bottom, transparent 0 34px, rgba(255, 255, 255, 0.45) 35px 36px);
 }
 
-.spinner {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 2.5px solid rgba(214, 178, 84, 0.3);
-  border-top-color: #d3a324;
-  animation: spin 900ms linear infinite;
+.longitude-lines {
+  background: repeating-linear-gradient(to right, transparent 0 40px, rgba(255, 255, 255, 0.35) 41px 42px);
+  transform: rotate(10deg);
 }
 
-.loading-title {
-  margin: 0;
-  font-size: 1.9rem;
-  line-height: 1.3;
-  font-weight: 500;
-  color: #635b4b;
-}
-
-.loading-subtitle {
-  margin: 0.4rem 0 0;
-  font-size: 1.1rem;
-  color: #938971;
-}
-
-.dock {
-  position: fixed;
-  left: 50%;
-  bottom: 1.4rem;
-  transform: translateX(-50%);
-  width: min(700px, calc(100% - 2rem));
-  padding: 0.55rem;
-  background: #f9f7f0;
-  border: 1px solid #e4dfd0;
+.country {
+  position: absolute;
+  border: 0;
   border-radius: 999px;
-  box-shadow: 0 10px 30px rgba(34, 32, 26, 0.14);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.4rem;
+  padding: 0.22rem 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-.dock-item {
+.tone-1 { background: #f2dfa6; color: #6e5f34; }
+.tone-2 { background: #e7c76a; color: #5f4a19; }
+.tone-3 { background: #d8a746; }
+.tone-4 { background: #b98032; }
+.tone-5 { background: #956026; }
+.tone-6 { background: #744814; }
+
+.year-rail {
+  position: fixed;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(236, 234, 228, 0.9);
+  border: 1px solid #bab6ab;
+  border-radius: 14px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  z-index: 3;
+}
+
+.year-rail button {
   border: 0;
   background: transparent;
-  color: #5f5644;
-  border-radius: 999px;
-  padding: 0.68rem 0.8rem;
-  font-size: 1.35rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.4rem;
+  color: #595247;
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.dock-item.active {
-  background: #e2ba43;
-  color: #352c1c;
+.year-rail .active {
+  background: #d3a73b;
+  color: #3b2f12;
+}
+
+.legend {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(236, 234, 227, 0.88);
+  color: #4d463a;
+  border-radius: 12px;
+  border: 1px solid #c7c1b0;
+  padding: 0.7rem 0.8rem;
+  z-index: 3;
+}
+
+.legend h2 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.legend ul {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.14rem 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.zoom-controls {
+  position: fixed;
+  right: 1.3rem;
+  bottom: 1.3rem;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 3;
+  box-shadow: 0 8px 18px rgba(7, 8, 15, 0.3);
+}
+
+.zoom-controls button {
+  display: block;
+  width: 44px;
+  height: 40px;
+  border: 0;
+  background: rgba(243, 241, 235, 0.97);
+  color: #3f392d;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
-.dock-icon {
-  line-height: 1;
+.zoom-controls button + button {
+  border-top: 1px solid #d3cdbf;
 }
 
-.sun-button {
-  position: fixed;
-  right: 1.2rem;
-  bottom: 1.6rem;
-  border: 1px solid #e2dbca;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: #f9f7ef;
-  color: #b28d20;
-  font-size: 1.35rem;
-  box-shadow: 0 6px 18px rgba(29, 26, 19, 0.12);
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 740px) {
-  .loading-panel {
-    transform: translateY(-11vh);
-    padding: 0 1.2rem;
-  }
-
-  .loading-title {
-    font-size: 1.35rem;
-  }
-
-  .loading-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .dock {
-    width: calc(100% - 1rem);
-    bottom: 0.8rem;
-  }
-
-  .dock-item {
-    padding: 0.62rem 0.35rem;
-    font-size: 1rem;
-    gap: 0.2rem;
-    flex-direction: column;
-  }
+@media (max-width: 900px) {
+  .hint-card h1 { font-size: 1.3rem; }
+  .hint-card p { font-size: 0.85rem; }
+  .year-rail { right: 0.55rem; }
+  .legend { left: 0.55rem; bottom: 0.55rem; }
 }
