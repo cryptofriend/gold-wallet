@@ -1,42 +1,118 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+}
+
+.landing {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+}
+
+.hero {
+  width: min(680px, 100%);
+  background: #ffffff;
+  border: 1px solid #ececf2;
+  border-radius: 18px;
   padding: 2rem;
-  text-align: center;
+  box-shadow: 0 12px 40px rgba(14, 18, 30, 0.08);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9c6b00;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  margin: 0.65rem 0 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  color: #111111;
+}
+
+.subhead {
+  margin-top: 0.85rem;
+  color: #4a4f60;
+  max-width: 52ch;
+}
+
+.primary-cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.primary-cta:hover {
+  background: #262626;
+}
+
+.waitlist-form {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+}
+
+.waitlist-form input {
+  width: 100%;
+  border: 1px solid #d5d8e1;
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  font-size: 1rem;
+}
+
+.waitlist-form button {
+  border: 0;
+  border-radius: 10px;
+  background: #d89a00;
+  color: #161207;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+}
+
+.waitlist-form button:hover {
+  background: #be8700;
+}
+
+.confirmation {
+  margin-top: 0.85rem;
+  color: #0e7a2f;
+  font-weight: 600;
+}
+
+.benefits {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+  color: #2b3142;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 620px) {
+  .hero {
+    padding: 1.25rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .waitlist-form {
+    grid-template-columns: 1fr;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
