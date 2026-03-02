@@ -1,34 +1,61 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [email, setEmail] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    if (!email.trim()) {
+      return
+    }
+
+    // Placeholder conversion event for future analytics wiring.
+    console.info('waitlist_signup_submitted', { email })
+    setSubmitted(true)
+    setEmail('')
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <main className="landing">
+      <section className="hero">
+        <p className="eyebrow">Gold Wallet</p>
+        <h1>Turn every spend into automatic gold savings.</h1>
+        <p className="subhead">
+          Join the waitlist for early access to Gold Command Center and get
+          launch perks reserved for first movers.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+        <form className="waitlist-form" onSubmit={handleSubmit}>
+          <label htmlFor="email" className="sr-only">
+            Email address
+          </label>
+          <input
+            id="email"
+            type="email"
+            value={email}
+            placeholder="you@company.com"
+            onChange={(event) => setEmail(event.target.value)}
+            required
+          />
+          <button type="submit">Join the Priority Waitlist</button>
+        </form>
+
+        {submitted && (
+          <p className="confirmation">
+            You&apos;re in. We&apos;ll send your early-access invite soon.
+          </p>
+        )}
+
+        <ul className="benefits">
+          <li>Weekly invite drops for top waitlist referrals</li>
+          <li>1-click onboarding when wallets go live</li>
+          <li>Founder updates with product milestones</li>
+        </ul>
+      </section>
+    </main>
   )
 }
 
