@@ -8,12 +8,22 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    if (!email.trim()) {
+    const normalizedEmail = email.trim().toLowerCase()
+
+    if (!normalizedEmail) {
       return
     }
 
+    const storedEmails = JSON.parse(localStorage.getItem('waitlistEmails') || '[]')
+    const nextEmails = Array.from(new Set([...storedEmails, normalizedEmail]))
+
+    localStorage.setItem('waitlistEmails', JSON.stringify(nextEmails))
+
     // Placeholder conversion event for future analytics wiring.
-    console.info('waitlist_signup_submitted', { email })
+    console.info('waitlist_signup_submitted', {
+      email: normalizedEmail,
+      totalStored: nextEmails.length,
+    })
     setSubmitted(true)
     setEmail('')
   }
@@ -28,7 +38,11 @@ function App() {
           launch perks reserved for first movers.
         </p>
 
-        <form className="waitlist-form" onSubmit={handleSubmit}>
+        <a href="#waitlist-form" className="primary-cta">
+          Get Early Access
+        </a>
+
+        <form id="waitlist-form" className="waitlist-form" onSubmit={handleSubmit}>
           <label htmlFor="email" className="sr-only">
             Email address
           </label>
