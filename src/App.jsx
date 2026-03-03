@@ -31,6 +31,16 @@ const CURRENCY_META = {
 
 const FALLBACK_XAU_USD = 2320
 
+const slugify = (value) =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+
+const formatMoney = (value) =>
+  typeof value === 'number' ? `$${Math.round(value).toLocaleString()}` : 'N/A'
+
 const UNIT_MULTIPLIERS = {
   ounce: 1,
   oz: 1,
@@ -273,6 +283,71 @@ function PriceCurrencyPage({ currencyCode, unitCode = 'ounce' }) {
   )
 }
 
+function CountriesIndexPage() {
+  const countries = countriesData.countries || []
+
+  usePageMeta('Gold Countries Index | Gold Wallet', 'Browse all countries and open country-level gold market snapshots.')
+
+  return (
+    <main className="doc-page">
+      <FreshnessBadge />
+      <h1>Countries</h1>
+      <p>{countries.length} country pages available.</p>
+      <div className="countries-grid">
+        {countries.slice(0, 120).map((country) => (
+          <a key={country.iso2} className="country-pill" href={`/countries/${slugify(country.country)}`}>
+            {country.country}
+          </a>
+        ))}
+      </div>
+    </main>
+  )
+}
+
+function CountryPage({ slug }) {
+  const country = (countriesData.countries || []).find((c) => slugify(c.country) === slug)
+
+  if (!country) {
+    usePageMeta('Country not found | Gold Wallet', 'Requested country page was not found.')
+    return (
+      <main className="doc-page">
+        <h1>Country not found</h1>
+        <a href="/countries">Back to countries</a>
+      </main>
+    )
+  }
+
+  const summary = `${country.country} currently reports ${formatMoney(
+    country.reserves_usd_including_gold,
+  )} in reserves (including gold), ${formatMoney(country.imports_usd)} imports, ${formatMoney(
+    country.exports_usd,
+  )} exports, and production at ${
+    typeof country.production_tonnes === 'number' ? `${country.production_tonnes} tonnes` : 'N/A'
+  }.`
+
+  usePageMeta(`${country.country} Gold Market Snapshot | Gold Wallet`, summary)
+
+  return (
+    <main className="doc-page">
+      <FreshnessBadge />
+      <a href="/countries">← Back to countries</a>
+      <h1>{country.country}</h1>
+      <p className="summary-block">{summary}</p>
+      <ul>
+        <li>ISO2: {country.iso2}</li>
+        <li>Currency: {country.currency || 'N/A'}</li>
+        <li>Reserves (USD incl. gold): {formatMoney(country.reserves_usd_including_gold)}</li>
+        <li>Imports (USD proxy): {formatMoney(country.imports_usd)}</li>
+        <li>Exports (USD proxy): {formatMoney(country.exports_usd)}</li>
+        <li>
+          Production (tonnes):{' '}
+          {typeof country.production_tonnes === 'number' ? country.production_tonnes : 'N/A'}
+        </li>
+      </ul>
+    </main>
+  )
+}
+
 function HomePage() {
   usePageMeta('Gold Wallet', 'Modern gold market intelligence with transparent data sourcing.')
   const [activeTab, setActiveTab] = useState('globe')
@@ -283,6 +358,7 @@ function HomePage() {
         <a href="/methodology">Methodology</a>
         <a href="/data-sources">Data Sources</a>
         <a href="/price/gold/usd/ounce">Gold Price</a>
+        <a href="/countries">Countries</a>
       </div>
 
       <section className="loading-panel" aria-live="polite">
@@ -322,6 +398,11 @@ function App() {
 
   if (path === '/methodology') return <MethodologyPage />
   if (path === '/data-sources') return <DataSourcesPage />
+  if (path === '/countries') return <CountriesIndexPage />
+  if (path.startsWith('/countries/')) {
+    const slug = path.replace('/countries/', '').replace(/\/$/, '')
+    return <CountryPage slug={slug} />
+  }
 
   if (path.startsWith('/price/gold/')) {
     const parts = path.replace('/price/gold/', '').split('/').filter(Boolean)

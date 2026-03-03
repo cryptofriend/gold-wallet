@@ -111,6 +111,30 @@
   color: #3f4a5d;
 }
 
+.countries-grid {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.country-pill {
+  border: 1px solid #dccca7;
+  background: #fff7df;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  text-decoration: none;
+  color: #5e4514;
+  font-weight: 600;
+}
+
+.summary-block {
+  border-left: 4px solid #d5b160;
+  background: #fff8e6;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+}
+
 .loading-panel {
   text-align: center;
   color: #6a6353;
