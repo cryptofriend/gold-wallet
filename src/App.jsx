@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import countriesData from '../gold-data/countries.json'
 import './App.css'
 
@@ -8,6 +8,43 @@ const tabs = [
   { id: 'inflow', label: 'Inflow', icon: '↓' },
   { id: 'my-gold', label: 'My Gold', icon: '▭' },
 ]
+
+const FX_RATES = {
+  usd: 1,
+  eur: 0.92,
+  gbp: 0.79,
+  jpy: 149.8,
+  aud: 1.53,
+  cad: 1.36,
+  inr: 82.9,
+}
+
+const CURRENCY_META = {
+  usd: { label: 'US Dollar', symbol: '$' },
+  eur: { label: 'Euro', symbol: '€' },
+  gbp: { label: 'British Pound', symbol: '£' },
+  jpy: { label: 'Japanese Yen', symbol: '¥' },
+  aud: { label: 'Australian Dollar', symbol: 'A$' },
+  cad: { label: 'Canadian Dollar', symbol: 'C$' },
+  inr: { label: 'Indian Rupee', symbol: '₹' },
+}
+
+const FALLBACK_XAU_USD = 2320
+
+function usePageMeta(title, description) {
+  useEffect(() => {
+    document.title = title
+
+    let desc = document.querySelector('meta[name="description"]')
+    if (!desc) {
+      desc = document.createElement('meta')
+      desc.setAttribute('name', 'description')
+      document.head.appendChild(desc)
+    }
+
+    desc.setAttribute('content', description)
+  }, [title, description])
+}
 
 function useFreshness() {
   return useMemo(() => {
@@ -56,6 +93,8 @@ function FreshnessBadge() {
 }
 
 function MethodologyPage() {
+  usePageMeta('Gold Wallet Methodology', 'How Gold Wallet aggregates and normalizes market data.')
+
   return (
     <main className="doc-page">
       <FreshnessBadge />
@@ -88,6 +127,8 @@ function MethodologyPage() {
 }
 
 function DataSourcesPage() {
+  usePageMeta('Gold Wallet Data Sources', 'Source registry for gold market metrics and update cadence.')
+
   return (
     <main className="doc-page">
       <FreshnessBadge />
@@ -141,7 +182,61 @@ function DataSourcesPage() {
   )
 }
 
+function PriceCurrencyPage({ currencyCode }) {
+  const code = currencyCode.toLowerCase()
+  const rate = FX_RATES[code]
+  const meta = CURRENCY_META[code]
+  const supported = Boolean(rate && meta)
+
+  const title = supported
+    ? `Gold Price in ${meta.label} (${code.toUpperCase()}) | Gold Wallet`
+    : 'Gold Wallet Price Page Not Found'
+
+  const description = supported
+    ? `Live-style gold price reference in ${meta.label}. Track XAU/${code.toUpperCase()} with transparent data freshness context.`
+    : 'Requested gold price currency page is not available.'
+
+  usePageMeta(title, description)
+
+  if (!supported) {
+    return (
+      <main className="doc-page">
+        <h1>Currency page not found</h1>
+        <p>Supported currencies: {Object.keys(FX_RATES).join(', ').toUpperCase()}</p>
+        <a href="/price/gold/usd">Go to USD gold price</a>
+      </main>
+    )
+  }
+
+  const goldPrice = FALLBACK_XAU_USD * rate
+
+  return (
+    <main className="doc-page">
+      <FreshnessBadge />
+      <h1>Gold Price ({code.toUpperCase()})</h1>
+      <p className="price-line">
+        {meta.symbol}
+        {goldPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+        <span> / troy ounce</span>
+      </p>
+      <p>
+        Base reference: ${FALLBACK_XAU_USD.toLocaleString()} XAU/USD, converted with current configured FX
+        rate ({rate}).
+      </p>
+
+      <div className="currency-links">
+        {Object.keys(FX_RATES).map((c) => (
+          <a key={c} href={`/price/gold/${c}`}>
+            {c.toUpperCase()}
+          </a>
+        ))}
+      </div>
+    </main>
+  )
+}
+
 function HomePage() {
+  usePageMeta('Gold Wallet', 'Modern gold market intelligence with transparent data sourcing.')
   const [activeTab, setActiveTab] = useState('globe')
 
   return (
@@ -149,6 +244,7 @@ function HomePage() {
       <div className="top-links">
         <a href="/methodology">Methodology</a>
         <a href="/data-sources">Data Sources</a>
+        <a href="/price/gold/usd">Gold Price</a>
       </div>
 
       <section className="loading-panel" aria-live="polite">
@@ -188,6 +284,11 @@ function App() {
 
   if (path === '/methodology') return <MethodologyPage />
   if (path === '/data-sources') return <DataSourcesPage />
+
+  if (path.startsWith('/price/gold/')) {
+    const code = path.replace('/price/gold/', '').replace('/', '')
+    return <PriceCurrencyPage currencyCode={code || 'usd'} />
+  }
 
   return <HomePage />
 }
