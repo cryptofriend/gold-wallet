@@ -11,6 +11,47 @@
   overflow: hidden;
 }
 
+.top-links {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.top-links a {
+  background: #fff8e3;
+  border: 1px solid #dfcfaa;
+  color: #5a4616;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.doc-page {
+  min-height: 100vh;
+  background: #f7f3e8;
+  color: #2f2718;
+  padding: 2rem 1.25rem 3rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.doc-page h1 {
+  margin-top: 0;
+}
+
+.doc-page h2 {
+  margin-top: 1.3rem;
+}
+
+.doc-page a {
+  color: #765711;
+  font-weight: 700;
+}
+
 .loading-panel {
   text-align: center;
   color: #6a6353;
