@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import countriesData from '../gold-data/countries.json'
 import priceData from '../gold-data/price.json'
 import './App.css'
@@ -10,21 +10,52 @@ const slugify = (value) =>
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
 
+const allCountries = countriesData.countries.map((country) => ({
+  ...country,
+  slug: slugify(country.country),
+}))
+
+const formatMoney = (value) => {
+  if (typeof value !== 'number') return 'N/A'
+  return `$${Math.round(value).toLocaleString()}`
+}
+
+const formatNumber = (value) => (typeof value === 'number' ? value.toLocaleString() : 'N/A')
+
+function usePageMeta(title, description) {
+  useEffect(() => {
+    document.title = title
+
+    let tag = document.querySelector('meta[name="description"]')
+    if (!tag) {
+      tag = document.createElement('meta')
+      tag.setAttribute('name', 'description')
+      document.head.appendChild(tag)
+    }
+
+    tag.setAttribute('content', description)
+  }, [title, description])
+}
+
 function CountriesIndex() {
+  usePageMeta(
+    'Gold Wallet — Countries Index',
+    'Browse all countries and their latest gold market snapshot fields.',
+  )
+
   const [query, setQuery] = useState('')
 
-  const countries = countriesData.countries
   const filtered = useMemo(() => {
-    if (!query.trim()) return countries
+    if (!query.trim()) return allCountries
 
     const q = query.toLowerCase()
-    return countries.filter(
+    return allCountries.filter(
       (country) =>
         country.country.toLowerCase().includes(q) ||
         country.iso2.toLowerCase().includes(q) ||
         (country.currency || '').toLowerCase().includes(q),
     )
-  }, [countries, query])
+  }, [query])
 
   return (
     <main className="countries-page">
@@ -47,23 +78,114 @@ function CountriesIndex() {
       </header>
 
       <section className="countries-grid" aria-label="Countries list">
-        {filtered.map((country) => {
-          const slug = slugify(country.country)
+        {filtered.map((country) => (
+          <a key={country.iso2} href={`/countries/${country.slug}`} className="country-card">
+            <h2>{country.country}</h2>
+            <p>ISO2: {country.iso2}</p>
+            <p>Currency: {country.currency || 'N/A'}</p>
+            <p>Reserves (USD incl. gold): {formatMoney(country.reserves_usd_including_gold)}</p>
+          </a>
+        ))}
+      </section>
+    </main>
+  )
+}
 
-          return (
-            <a key={country.iso2} href={`/countries/${slug}`} className="country-card">
-              <h2>{country.country}</h2>
-              <p>ISO2: {country.iso2}</p>
-              <p>Currency: {country.currency || 'N/A'}</p>
-              <p>
-                Reserves (USD incl. gold):{' '}
-                {country.reserves_usd_including_gold
-                  ? `$${Math.round(country.reserves_usd_including_gold).toLocaleString()}`
-                  : 'N/A'}
-              </p>
-            </a>
-          )
-        })}
+function CountryPage({ slug }) {
+  const country = allCountries.find((entry) => entry.slug === slug)
+
+  const description = country
+    ? `${country.country} gold market snapshot including reserves, imports/exports, production, and sources.`
+    : 'Country not found in Gold Wallet market dataset.'
+
+  usePageMeta(
+    country ? `Gold Wallet — ${country.country} Gold Market` : 'Gold Wallet — Country Not Found',
+    description,
+  )
+
+  const jsonLd = country
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Dataset',
+        name: `${country.country} Gold Market Snapshot`,
+        description,
+        dateModified: country.updated_at,
+        spatialCoverage: country.country,
+        variableMeasured: [
+          'reserves_tonnes',
+          'imports_usd',
+          'exports_usd',
+          'production_tonnes',
+          'reserves_usd_including_gold',
+        ],
+        url: `${window.location.origin}/countries/${country.slug}`,
+      }
+    : null
+
+  if (!country) {
+    return (
+      <main className="fallback-page">
+        <h1>Country not found</h1>
+        <a href="/countries">Back to Countries Index</a>
+      </main>
+    )
+  }
+
+  return (
+    <main className="country-page">
+      {jsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      )}
+
+      <a className="back-link" href="/countries">
+        ← All countries
+      </a>
+
+      <section className="country-hero">
+        <p className="eyebrow">Country Snapshot</p>
+        <h1>{country.country}</h1>
+        <p>ISO2: {country.iso2} • Currency: {country.currency || 'N/A'}</p>
+      </section>
+
+      <section className="metrics-grid">
+        <article className="metric-card">
+          <h2>Gold reserves (tonnes)</h2>
+          <p>{formatNumber(country.reserves_tonnes)}</p>
+        </article>
+        <article className="metric-card">
+          <h2>Imports (USD)</h2>
+          <p>{formatMoney(country.imports_usd)}</p>
+        </article>
+        <article className="metric-card">
+          <h2>Exports (USD)</h2>
+          <p>{formatMoney(country.exports_usd)}</p>
+        </article>
+        <article className="metric-card">
+          <h2>Production (tonnes)</h2>
+          <p>{formatNumber(country.production_tonnes)}</p>
+        </article>
+        <article className="metric-card">
+          <h2>Reserves (USD incl. gold)</h2>
+          <p>{formatMoney(country.reserves_usd_including_gold)}</p>
+        </article>
+        <article className="metric-card">
+          <h2>Reserves data year</h2>
+          <p>{country.reserves_usd_year || 'N/A'}</p>
+        </article>
+      </section>
+
+      <section className="sources-section">
+        <h2>Sources</h2>
+        <ul>
+          {country.sources.map((source) => (
+            <li key={`${source.name}-${source.url}`}>
+              <a href={source.url} target="_blank" rel="noreferrer">
+                {source.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p className="meta">Updated at: {new Date(country.updated_at).toLocaleString()}</p>
       </section>
     </main>
   )
@@ -77,13 +199,8 @@ function App() {
   }
 
   if (path.startsWith('/countries/')) {
-    return (
-      <main className="fallback-page">
-        <h1>Country pages are next</h1>
-        <p>This route is reserved for country detail pages in the next task.</p>
-        <a href="/countries">Back to Countries Index</a>
-      </main>
-    )
+    const slug = decodeURIComponent(path.replace('/countries/', '').replace(/\/$/, ''))
+    return <CountryPage slug={slug} />
   }
 
   return (
