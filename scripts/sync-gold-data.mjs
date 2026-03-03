@@ -15,6 +15,8 @@ const repoRoot = process.cwd()
 const outDir = path.join(repoRoot, 'gold-data')
 const countriesOut = path.join(outDir, 'countries.json')
 const priceOut = path.join(outDir, 'price.json')
+const productionSeedPath = path.join(outDir, 'production-seed.json')
+const tradeCachePath = path.join(outDir, 'trade-cache.json')
 
 const nowIso = new Date().toISOString()
 
@@ -26,6 +28,16 @@ const fetchJson = async (url) => {
   }
 
   return res.json()
+}
+
+const readJsonIfExists = async (filePath) => {
+  try {
+    const raw = await fs.readFile(filePath, 'utf8')
+    return JSON.parse(raw)
+  } catch (error) {
+    if (error.code === 'ENOENT') return null
+    throw error
+  }
 }
 
 const mapLatestReservesByIso3 = (rows) => {
@@ -68,6 +80,11 @@ const main = async () => {
 
   const wbCountries = wbCountriesPayload?.[1] || []
   const wbReserves = wbReservesPayload?.[1] || []
+  const productionSeed = await readJsonIfExists(productionSeedPath)
+  const tradeCache = await readJsonIfExists(tradeCachePath)
+
+  const productionByIso2 = productionSeed?.production_tonnes_by_iso2 || {}
+  const tradeByIso2 = tradeCache?.trade_usd_by_iso2 || {}
 
   const wbIso2ToIso3 = new Map(
     wbCountries
@@ -84,14 +101,17 @@ const main = async () => {
       const iso3 = (country.cca3 || wbIso2ToIso3.get(iso2) || '').toUpperCase() || null
       const reserves = iso3 ? reservesByIso3.get(iso3) : null
 
+      const trade = tradeByIso2[iso2] || {}
+      const seededProduction = productionByIso2[iso2]
+
       return {
         country: country.name.common,
         iso2,
         currency: normalizeCurrency(country.currencies),
         reserves_tonnes: null,
-        imports_usd: null,
-        exports_usd: null,
-        production_tonnes: null,
+        imports_usd: typeof trade.imports_usd === 'number' ? trade.imports_usd : null,
+        exports_usd: typeof trade.exports_usd === 'number' ? trade.exports_usd : null,
+        production_tonnes: typeof seededProduction === 'number' ? seededProduction : null,
         updated_at: nowIso,
         sources: [
           {
@@ -101,6 +121,16 @@ const main = async () => {
           {
             name: 'World Bank API - FI.RES.TOTL.CD (includes gold, current US$)',
             url: 'https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json',
+          },
+          {
+            name: 'UN Comtrade (trade cache, optional)',
+            url: 'https://comtradeplus.un.org/',
+          },
+          {
+            name: productionSeed?.source?.name || 'USGS production seed',
+            url:
+              productionSeed?.source?.url ||
+              'https://www.usgs.gov/centers/national-minerals-information-center/gold-statistics-and-information',
           },
         ],
         reserves_usd_including_gold: reserves?.value ?? null,

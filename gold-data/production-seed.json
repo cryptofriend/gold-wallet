@@ -1,0 +1,37 @@
+{
+  "description": "Annual mined gold production estimates (tonnes) for selected countries. Used as seed until automated source ingestion is connected.",
+  "updated_at": "2026-03-03T06:00:00.000Z",
+  "source": {
+    "name": "USGS Minerals Commodity Summaries / World Gold Council references",
+    "url": "https://www.usgs.gov/centers/national-minerals-information-center/gold-statistics-and-information"
+  },
+  "production_tonnes_by_iso2": {
+    "CN": 378,
+    "RU": 321,
+    "AU": 294,
+    "CA": 191,
+    "US": 167,
+    "GH": 129,
+    "MX": 126,
+    "KZ": 130,
+    "ZA": 101,
+    "PE": 97,
+    "UZ": 119,
+    "ID": 110,
+    "SD": 90,
+    "BR": 70,
+    "PG": 72,
+    "AR": 62,
+    "TZ": 56,
+    "ML": 72,
+    "CO": 52,
+    "PH": 38,
+    "TR": 35,
+    "IN": 2,
+    "JP": 7,
+    "DE": null,
+    "FR": null,
+    "CH": null,
+    "NL": null
+  }
+}

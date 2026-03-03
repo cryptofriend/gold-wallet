@@ -1,14 +1,15 @@
 {
   "name": "gold-wallet",
   "private": true,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "data:sync": "node scripts/sync-gold-data.mjs"
+    "data:sync": "node scripts/sync-gold-data.mjs",
+    "data:trade": "node scripts/sync-trade-cache.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",
