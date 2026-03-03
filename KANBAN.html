@@ -101,16 +101,16 @@
     <section class="board" id="board"></section>
 
     <script>
-      const STORAGE_KEY = 'gold-wallet-kanban-v1'
+      const STORAGE_KEY = 'gold-wallet-kanban-v2'
 
       const columns = ['Backlog', 'Ready', 'In Progress', 'Review', 'Done']
 
       const defaultCards = [
-        { id: 'w1-1', title: 'Add /methodology page', tags: ['Trust', 'Week 1'], status: 'Ready' },
-        { id: 'w1-2', title: 'Add /data-sources page', tags: ['Trust', 'Week 1'], status: 'Ready' },
-        { id: 'w1-3', title: 'Freshness badge on pages', tags: ['Trust', 'UX'], status: 'Backlog' },
-        { id: 'w1-4', title: 'Stale-data fallback UI', tags: ['Reliability'], status: 'Backlog' },
-        { id: 'w2-1', title: 'Price pages by currency', tags: ['SEO', 'Week 2'], status: 'Backlog' },
+        { id: 'w1-1', title: 'Add /methodology page', tags: ['Trust', 'Week 1'], status: 'Done' },
+        { id: 'w1-2', title: 'Add /data-sources page', tags: ['Trust', 'Week 1'], status: 'Done' },
+        { id: 'w1-3', title: 'Freshness badge on pages', tags: ['Trust', 'UX'], status: 'Done' },
+        { id: 'w1-4', title: 'Stale-data fallback UI', tags: ['Reliability'], status: 'Done' },
+        { id: 'w2-1', title: 'Price pages by currency', tags: ['SEO', 'Week 2'], status: 'Ready' },
         { id: 'w2-2', title: 'Price pages by unit', tags: ['SEO', 'Week 2'], status: 'Backlog' },
         { id: 'w2-3', title: 'Sitemap segmentation', tags: ['SEO'], status: 'Backlog' },
         { id: 'w3-1', title: 'Country summary block', tags: ['AI SEO', 'Week 3'], status: 'Backlog' },
