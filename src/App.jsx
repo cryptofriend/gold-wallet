@@ -31,6 +31,24 @@ const CURRENCY_META = {
 
 const FALLBACK_XAU_USD = 2320
 
+const UNIT_MULTIPLIERS = {
+  ounce: 1,
+  oz: 1,
+  gram: 1 / 31.1034768,
+  g: 1 / 31.1034768,
+  kilo: 1000 / 31.1034768,
+  kg: 1000 / 31.1034768,
+}
+
+const UNIT_LABELS = {
+  ounce: 'troy ounce',
+  oz: 'troy ounce',
+  gram: 'gram',
+  g: 'gram',
+  kilo: 'kilogram',
+  kg: 'kilogram',
+}
+
 function usePageMeta(title, description) {
   useEffect(() => {
     document.title = title
@@ -182,52 +200,72 @@ function DataSourcesPage() {
   )
 }
 
-function PriceCurrencyPage({ currencyCode }) {
+function PriceCurrencyPage({ currencyCode, unitCode = 'ounce' }) {
   const code = currencyCode.toLowerCase()
+  const unit = unitCode.toLowerCase()
+
   const rate = FX_RATES[code]
   const meta = CURRENCY_META[code]
-  const supported = Boolean(rate && meta)
+  const unitMultiplier = UNIT_MULTIPLIERS[unit]
+  const unitLabel = UNIT_LABELS[unit]
+
+  const supported = Boolean(rate && meta && unitMultiplier && unitLabel)
 
   const title = supported
-    ? `Gold Price in ${meta.label} (${code.toUpperCase()}) | Gold Wallet`
+    ? `Gold Price per ${unitLabel} in ${meta.label} (${code.toUpperCase()}) | Gold Wallet`
     : 'Gold Wallet Price Page Not Found'
 
   const description = supported
-    ? `Live-style gold price reference in ${meta.label}. Track XAU/${code.toUpperCase()} with transparent data freshness context.`
-    : 'Requested gold price currency page is not available.'
+    ? `Gold price per ${unitLabel} in ${meta.label}. Track XAU/${code.toUpperCase()} by unit with transparent data freshness context.`
+    : 'Requested gold price page is not available.'
 
   usePageMeta(title, description)
 
   if (!supported) {
     return (
       <main className="doc-page">
-        <h1>Currency page not found</h1>
+        <h1>Price page not found</h1>
         <p>Supported currencies: {Object.keys(FX_RATES).join(', ').toUpperCase()}</p>
-        <a href="/price/gold/usd">Go to USD gold price</a>
+        <p>Supported units: ounce, gram, kilo</p>
+        <a href="/price/gold/usd/ounce">Go to USD ounce gold price</a>
       </main>
     )
   }
 
-  const goldPrice = FALLBACK_XAU_USD * rate
+  const goldPrice = FALLBACK_XAU_USD * rate * unitMultiplier
 
   return (
     <main className="doc-page">
       <FreshnessBadge />
-      <h1>Gold Price ({code.toUpperCase()})</h1>
+      <h1>
+        Gold Price ({code.toUpperCase()}) / {unitLabel}
+      </h1>
       <p className="price-line">
         {meta.symbol}
         {goldPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-        <span> / troy ounce</span>
+        <span> / {unitLabel}</span>
       </p>
       <p>
-        Base reference: ${FALLBACK_XAU_USD.toLocaleString()} XAU/USD, converted with current configured FX
-        rate ({rate}).
+        Base reference: ${FALLBACK_XAU_USD.toLocaleString()} XAU/USD, converted with FX rate ({rate}) and
+        unit multiplier ({unitMultiplier.toFixed(6)}).
       </p>
 
       <div className="currency-links">
         {Object.keys(FX_RATES).map((c) => (
-          <a key={c} href={`/price/gold/${c}`}>
+          <a key={c} href={`/price/gold/${c}/${unit}`}>
             {c.toUpperCase()}
+          </a>
+        ))}
+      </div>
+
+      <div className="unit-links">
+        {[
+          { slug: 'ounce', label: 'Ounce' },
+          { slug: 'gram', label: 'Gram' },
+          { slug: 'kilo', label: 'Kilo' },
+        ].map((u) => (
+          <a key={u.slug} href={`/price/gold/${code}/${u.slug}`}>
+            {u.label}
           </a>
         ))}
       </div>
@@ -244,7 +282,7 @@ function HomePage() {
       <div className="top-links">
         <a href="/methodology">Methodology</a>
         <a href="/data-sources">Data Sources</a>
-        <a href="/price/gold/usd">Gold Price</a>
+        <a href="/price/gold/usd/ounce">Gold Price</a>
       </div>
 
       <section className="loading-panel" aria-live="polite">
@@ -286,8 +324,10 @@ function App() {
   if (path === '/data-sources') return <DataSourcesPage />
 
   if (path.startsWith('/price/gold/')) {
-    const code = path.replace('/price/gold/', '').replace('/', '')
-    return <PriceCurrencyPage currencyCode={code || 'usd'} />
+    const parts = path.replace('/price/gold/', '').split('/').filter(Boolean)
+    const currency = parts[0] || 'usd'
+    const unit = parts[1] || 'ounce'
+    return <PriceCurrencyPage currencyCode={currency} unitCode={unit} />
   }
 
   return <HomePage />

@@ -64,14 +64,16 @@
   color: #65573d;
 }
 
-.currency-links {
+.currency-links,
+.unit-links {
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
 }
 
-.currency-links a {
+.currency-links a,
+.unit-links a {
   border: 1px solid #dccca7;
   background: #fff7df;
   border-radius: 999px;
