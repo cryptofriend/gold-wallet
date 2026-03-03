@@ -2,7 +2,7 @@
   "schema": {
     "country": "string",
     "iso2": "string (ISO 3166-1 alpha-2)",
-    "currency": "string (ISO 4217)",
+    "currency": "string (ISO 4217)|null",
     "reserves_tonnes": "number|null",
     "imports_usd": "number|null",
     "exports_usd": "number|null",
@@ -13,56 +13,5512 @@
         "name": "string",
         "url": "string"
       }
-    ]
+    ],
+    "reserves_usd_including_gold": "number|null",
+    "reserves_usd_year": "string|null"
   },
+  "generated_at": "2026-03-03T05:42:32.404Z",
+  "countries_count": 250,
   "countries": [
     {
-      "country": "United States",
-      "iso2": "US",
-      "currency": "USD",
-      "reserves_tonnes": 8133.5,
-      "imports_usd": null,
-      "exports_usd": null,
-      "production_tonnes": 166.7,
-      "updated_at": "2026-03-03T12:15:00+07:00",
-      "sources": [
-        {
-          "name": "World Gold Council - Gold Demand Trends",
-          "url": "https://www.gold.org/goldhub/data"
-        }
-      ]
-    },
-    {
-      "country": "Germany",
-      "iso2": "DE",
-      "currency": "EUR",
-      "reserves_tonnes": 3351.1,
+      "country": "Afghanistan",
+      "iso2": "AF",
+      "currency": "AFN",
+      "reserves_tonnes": null,
       "imports_usd": null,
       "exports_usd": null,
       "production_tonnes": null,
-      "updated_at": "2026-03-03T12:15:00+07:00",
+      "updated_at": "2026-03-03T05:42:32.404Z",
       "sources": [
         {
-          "name": "Bundesbank / World Gold Council",
-          "url": "https://www.gold.org/goldhub/data"
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
         }
-      ]
+      ],
+      "reserves_usd_including_gold": 9748946326.71795,
+      "reserves_usd_year": "2020"
+    },
+    {
+      "country": "Åland Islands",
+      "iso2": "AX",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Albania",
+      "iso2": "AL",
+      "currency": "ALL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 6515581527.60071,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Algeria",
+      "iso2": "DZ",
+      "currency": "DZD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 83007108429.3211,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "American Samoa",
+      "iso2": "AS",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Andorra",
+      "iso2": "AD",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Angola",
+      "iso2": "AO",
+      "currency": "AOA",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 14242892504.625,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Anguilla",
+      "iso2": "AI",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Antarctica",
+      "iso2": "AQ",
+      "currency": null,
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Antigua and Barbuda",
+      "iso2": "AG",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 358440631.721895,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Argentina",
+      "iso2": "AR",
+      "currency": "ARS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 29559610350.7831,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Armenia",
+      "iso2": "AM",
+      "currency": "AMD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3685220142.94538,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Aruba",
+      "iso2": "AW",
+      "currency": "AWG",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1468151730,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "currency": "AUD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 60404058269.2777,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Austria",
+      "iso2": "AT",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 35405646262.0747,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Azerbaijan",
+      "iso2": "AZ",
+      "currency": "AZN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 12699124299.9099,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Bahamas",
+      "iso2": "BS",
+      "currency": "BSD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2511681591.43478,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Bahrain",
+      "iso2": "BH",
+      "currency": "BHD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 4948702759.13155,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "currency": "BDT",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 21394795733.0405,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Barbados",
+      "iso2": "BB",
+      "currency": "BBD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1605919490.51553,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Belarus",
+      "iso2": "BY",
+      "currency": "BYN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 8912194598.43984,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Belgium",
+      "iso2": "BE",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 41449463816.1493,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Belize",
+      "iso2": "BZ",
+      "currency": "BZD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 498087320.739572,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Benin",
+      "iso2": "BJ",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Bermuda",
+      "iso2": "BM",
+      "currency": "BMD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Bhutan",
+      "iso2": "BT",
+      "currency": "BTN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 941017689.206037,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Bolivia",
+      "iso2": "BO",
+      "currency": "BOB",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1977025889.30984,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "iso2": "BA",
+      "currency": "BAM",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 9418858050.22744,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Botswana",
+      "iso2": "BW",
+      "currency": "BWP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3455661776.33964,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Bouvet Island",
+      "iso2": "BV",
+      "currency": null,
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Brazil",
+      "iso2": "BR",
+      "currency": "BRL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 329732443813.378,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "British Indian Ocean Territory",
+      "iso2": "IO",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "British Virgin Islands",
+      "iso2": "VG",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Brunei",
+      "iso2": "BN",
+      "currency": "BND",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 4414307817.04608,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Bulgaria",
+      "iso2": "BG",
+      "currency": "BGN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 43698277895.9665,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Burkina Faso",
+      "iso2": "BF",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Burundi",
+      "iso2": "BI",
+      "currency": "BIF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 90349885.1781753,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Cambodia",
+      "iso2": "KH",
+      "currency": "KHR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 22505568572.5432,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Cameroon",
+      "iso2": "CM",
+      "currency": "XAF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 4882047276.67739,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "currency": "CAD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 119778473396.958,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Cape Verde",
+      "iso2": "CV",
+      "currency": "CVE",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 783105557.825454,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Caribbean Netherlands",
+      "iso2": "BQ",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Cayman Islands",
+      "iso2": "KY",
+      "currency": "KYD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 234000000,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Central African Republic",
+      "iso2": "CF",
+      "currency": "XAF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 479592712.605639,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Chad",
+      "iso2": "TD",
+      "currency": "XAF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1049788251.30153,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Chile",
+      "iso2": "CL",
+      "currency": "CLP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 44403009394.3695,
+      "reserves_usd_year": "2024"
     },
     {
       "country": "China",
       "iso2": "CN",
       "currency": "CNY",
-      "reserves_tonnes": 2264.3,
+      "reserves_tonnes": null,
       "imports_usd": null,
       "exports_usd": null,
-      "production_tonnes": 378.2,
-      "updated_at": "2026-03-03T12:15:00+07:00",
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
       "sources": [
         {
-          "name": "China Gold Association / World Gold Council",
-          "url": "https://www.gold.org/goldhub/data"
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
         }
-      ]
+      ],
+      "reserves_usd_including_gold": 3456024808739.12,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Christmas Island",
+      "iso2": "CX",
+      "currency": "AUD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Cocos (Keeling) Islands",
+      "iso2": "CC",
+      "currency": "AUD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Colombia",
+      "iso2": "CO",
+      "currency": "COP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 61897968642.424,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Comoros",
+      "iso2": "KM",
+      "currency": "KMF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 323945586.380687,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Cook Islands",
+      "iso2": "CK",
+      "currency": "CKD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Costa Rica",
+      "iso2": "CR",
+      "currency": "CRC",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 14177018013.5179,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Croatia",
+      "iso2": "HR",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3335632832.65449,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Cuba",
+      "iso2": "CU",
+      "currency": "CUC",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 144018160,
+      "reserves_usd_year": "1960"
+    },
+    {
+      "country": "Curaçao",
+      "iso2": "CW",
+      "currency": "ANG",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Cyprus",
+      "iso2": "CY",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2087536372.47629,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Czechia",
+      "iso2": "CZ",
+      "currency": "CZK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 146281239761.971,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Denmark",
+      "iso2": "DK",
+      "currency": "DKK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 108405100882.539,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Djibouti",
+      "iso2": "DJ",
+      "currency": "DJF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 348725427.269846,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Dominica",
+      "iso2": "DM",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 155971242.017245,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Dominican Republic",
+      "iso2": "DO",
+      "currency": "DOP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 13471257812.8679,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "DR Congo",
+      "iso2": "CD",
+      "currency": "CDF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5104181646.5526,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Ecuador",
+      "iso2": "EC",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 6907743954.50087,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Egypt",
+      "iso2": "EG",
+      "currency": "EGP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 44921341018.4659,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "El Salvador",
+      "iso2": "SV",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3704746691.22734,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Equatorial Guinea",
+      "iso2": "GQ",
+      "currency": "XAF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1538461553.77119,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Eritrea",
+      "iso2": "ER",
+      "currency": "ERN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 191694416.403147,
+      "reserves_usd_year": "2019"
+    },
+    {
+      "country": "Estonia",
+      "iso2": "EE",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2074707140.31103,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Eswatini",
+      "iso2": "SZ",
+      "currency": "SZL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 479261051.167947,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Ethiopia",
+      "iso2": "ET",
+      "currency": "ETB",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3784387425.19121,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Falkland Islands",
+      "iso2": "FK",
+      "currency": "FKP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Faroe Islands",
+      "iso2": "FO",
+      "currency": "DKK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Fiji",
+      "iso2": "FJ",
+      "currency": "FJD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1599606710.18293,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Finland",
+      "iso2": "FI",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 17992736653.4528,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "France",
+      "iso2": "FR",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 282857002813.825,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "French Guiana",
+      "iso2": "GF",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "French Polynesia",
+      "iso2": "PF",
+      "currency": "XPF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "French Southern and Antarctic Lands",
+      "iso2": "TF",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Gabon",
+      "iso2": "GA",
+      "currency": "XAF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1447408422.70298,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Gambia",
+      "iso2": "GM",
+      "currency": "GMD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 577028229.488264,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Georgia",
+      "iso2": "GE",
+      "currency": "GEL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 4447216641.42079,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 377935574356.242,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Ghana",
+      "iso2": "GH",
+      "currency": "GHS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3623904994.58702,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Gibraltar",
+      "iso2": "GI",
+      "currency": "GIP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Greece",
+      "iso2": "GR",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 15221540695.0005,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Greenland",
+      "iso2": "GL",
+      "currency": "DKK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Grenada",
+      "iso2": "GD",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 423263143.568031,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Guadeloupe",
+      "iso2": "GP",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Guam",
+      "iso2": "GU",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Guatemala",
+      "iso2": "GT",
+      "currency": "GTQ",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 24412418011.7846,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Guernsey",
+      "iso2": "GG",
+      "currency": "GBP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Guinea",
+      "iso2": "GN",
+      "currency": "GNF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1887171051.40105,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Guinea-Bissau",
+      "iso2": "GW",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Guyana",
+      "iso2": "GY",
+      "currency": "GYD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1009772163.61402,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Haiti",
+      "iso2": "HT",
+      "currency": "HTG",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2717628883.1602,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Heard Island and McDonald Islands",
+      "iso2": "HM",
+      "currency": null,
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Honduras",
+      "iso2": "HN",
+      "currency": "HNL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 8036257488.95927,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Hong Kong",
+      "iso2": "HK",
+      "currency": "HKD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 425554111033.182,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Hungary",
+      "iso2": "HU",
+      "currency": "HUF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 46422357553.8952,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Iceland",
+      "iso2": "IS",
+      "currency": "ISK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 6402950468.75603,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "India",
+      "iso2": "IN",
+      "currency": "INR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 643042560625.541,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Indonesia",
+      "iso2": "ID",
+      "currency": "IDR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 155708275547.574,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Iran",
+      "iso2": "IR",
+      "currency": "IRR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 7685456407.40761,
+      "reserves_usd_year": "1982"
+    },
+    {
+      "country": "Iraq",
+      "iso2": "IQ",
+      "currency": "IQD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 100690954781.588,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Ireland",
+      "iso2": "IE",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 12697664211.8083,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Isle of Man",
+      "iso2": "IM",
+      "currency": "GBP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Israel",
+      "iso2": "IL",
+      "currency": "ILS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 214543676669.814,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Italy",
+      "iso2": "IT",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 290547246726.359,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Ivory Coast",
+      "iso2": "CI",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Jamaica",
+      "iso2": "JM",
+      "currency": "JMD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 4868643492.7225,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Japan",
+      "iso2": "JP",
+      "currency": "JPY",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1230666979042.45,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Jersey",
+      "iso2": "JE",
+      "currency": "GBP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Jordan",
+      "iso2": "JO",
+      "currency": "JOD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 21939099361.5116,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Kazakhstan",
+      "iso2": "KZ",
+      "currency": "KZT",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 45807523139.2562,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Kenya",
+      "iso2": "KE",
+      "currency": "KES",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 10066607177.351,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Kiribati",
+      "iso2": "KI",
+      "currency": "AUD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Kosovo",
+      "iso2": "XK",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Kuwait",
+      "iso2": "KW",
+      "currency": "KWD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 50727942998.1333,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Kyrgyzstan",
+      "iso2": "KG",
+      "currency": "KGS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5088723593.73523,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Laos",
+      "iso2": "LA",
+      "currency": "LAK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1769745792.21118,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Latvia",
+      "iso2": "LV",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5141113061.28181,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Lebanon",
+      "iso2": "LB",
+      "currency": "LBP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 33301277509.6206,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Lesotho",
+      "iso2": "LS",
+      "currency": "LSL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1007862057.19677,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Liberia",
+      "iso2": "LR",
+      "currency": "LRD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 599660417.529906,
+      "reserves_usd_year": "2022"
+    },
+    {
+      "country": "Libya",
+      "iso2": "LY",
+      "currency": "LYD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 92893708178.1604,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Liechtenstein",
+      "iso2": "LI",
+      "currency": "CHF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Lithuania",
+      "iso2": "LT",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 7406410382.10623,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Luxembourg",
+      "iso2": "LU",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2789495616.04244,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Macau",
+      "iso2": "MO",
+      "currency": "MOP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 29391736000,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Madagascar",
+      "iso2": "MG",
+      "currency": "MGA",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2784591092.62259,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Malawi",
+      "iso2": "MW",
+      "currency": "MWK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 594498493.623211,
+      "reserves_usd_year": "2020"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "currency": "MYR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 116229205257.758,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Maldives",
+      "iso2": "MV",
+      "currency": "MVR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 673885912.694607,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Mali",
+      "iso2": "ML",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Malta",
+      "iso2": "MT",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1417638671.81291,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Marshall Islands",
+      "iso2": "MH",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Martinique",
+      "iso2": "MQ",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Mauritania",
+      "iso2": "MR",
+      "currency": "MRU",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2038562789.40175,
+      "reserves_usd_year": "2021"
+    },
+    {
+      "country": "Mauritius",
+      "iso2": "MU",
+      "currency": "MUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 8506134285.10038,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Mayotte",
+      "iso2": "YT",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Mexico",
+      "iso2": "MX",
+      "currency": "MXN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 232035392464.815,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Micronesia",
+      "iso2": "FM",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 497434120.418255,
+      "reserves_usd_year": "2021"
+    },
+    {
+      "country": "Moldova",
+      "iso2": "MD",
+      "currency": "MDL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5483515866.86942,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Monaco",
+      "iso2": "MC",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Mongolia",
+      "iso2": "MN",
+      "currency": "MNT",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5507944030.50837,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Montenegro",
+      "iso2": "ME",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1741494536.63686,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Montserrat",
+      "iso2": "MS",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Morocco",
+      "iso2": "MA",
+      "currency": "MAD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 37133907722.7893,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Mozambique",
+      "iso2": "MZ",
+      "currency": "MZN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3842855300.7001,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Myanmar",
+      "iso2": "MM",
+      "currency": "MMK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 9337819633.15963,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Namibia",
+      "iso2": "NA",
+      "currency": "NAD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3355524014.61227,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Nauru",
+      "iso2": "NR",
+      "currency": "AUD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "currency": "NPR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 12456122668.8948,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Netherlands",
+      "iso2": "NL",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 79129152086.1887,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "New Caledonia",
+      "iso2": "NC",
+      "currency": "XPF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "New Zealand",
+      "iso2": "NZ",
+      "currency": "NZD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 22065156553.5373,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Nicaragua",
+      "iso2": "NI",
+      "currency": "NIO",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 6104867094.0143,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Niger",
+      "iso2": "NE",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Nigeria",
+      "iso2": "NG",
+      "currency": "NGN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 38612493466.5986,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Niue",
+      "iso2": "NU",
+      "currency": "NZD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Norfolk Island",
+      "iso2": "NF",
+      "currency": "AUD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "North Korea",
+      "iso2": "KP",
+      "currency": "KPW",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "North Macedonia",
+      "iso2": "MK",
+      "currency": "MKD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5251936213.50666,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Northern Mariana Islands",
+      "iso2": "MP",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Norway",
+      "iso2": "NO",
+      "currency": "NOK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 81241559661.5009,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Oman",
+      "iso2": "OM",
+      "currency": "OMR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 18286526117.9972,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Pakistan",
+      "iso2": "PK",
+      "currency": "PKR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 18407745860.6666,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Palau",
+      "iso2": "PW",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Palestine",
+      "iso2": "PS",
+      "currency": "EGP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1328000000,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Panama",
+      "iso2": "PA",
+      "currency": "PAB",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 6855505288.43603,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Papua New Guinea",
+      "iso2": "PG",
+      "currency": "PGK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3901331641.41289,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Paraguay",
+      "iso2": "PY",
+      "currency": "PYG",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 9885683629.59266,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Peru",
+      "iso2": "PE",
+      "currency": "PEN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 79246042707.9259,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Philippines",
+      "iso2": "PH",
+      "currency": "PHP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 106195050244.098,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Pitcairn Islands",
+      "iso2": "PN",
+      "currency": "NZD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Poland",
+      "iso2": "PL",
+      "currency": "PLN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 223114909804.172,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Portugal",
+      "iso2": "PT",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 42434182603.5071,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Puerto Rico",
+      "iso2": "PR",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Qatar",
+      "iso2": "QA",
+      "currency": "QAR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 53987415590.4034,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Republic of the Congo",
+      "iso2": "CG",
+      "currency": "XAF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 715391052.357981,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Réunion",
+      "iso2": "RE",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Romania",
+      "iso2": "RO",
+      "currency": "RON",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 73391248091.2734,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Russia",
+      "iso2": "RU",
+      "currency": "RUB",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 597217063819.197,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Rwanda",
+      "iso2": "RW",
+      "currency": "RWF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2406450701.62443,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Saint Barthélemy",
+      "iso2": "BL",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Saint Helena, Ascension and Tristan da Cunha",
+      "iso2": "SH",
+      "currency": "GBP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Saint Kitts and Nevis",
+      "iso2": "KN",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 294747744.694362,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Saint Lucia",
+      "iso2": "LC",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 406063791.484465,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Saint Martin",
+      "iso2": "MF",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Saint Pierre and Miquelon",
+      "iso2": "PM",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Saint Vincent and the Grenadines",
+      "iso2": "VC",
+      "currency": "XCD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 316823948.572001,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Samoa",
+      "iso2": "WS",
+      "currency": "WST",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 507740280.935857,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "San Marino",
+      "iso2": "SM",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 836088074.053394,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "São Tomé and Príncipe",
+      "iso2": "ST",
+      "currency": "STN",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 46247347.8884686,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "currency": "SAR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 463869589071.029,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Senegal",
+      "iso2": "SN",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Serbia",
+      "iso2": "RS",
+      "currency": "RSD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 30484164151.2486,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Seychelles",
+      "iso2": "SC",
+      "currency": "SCR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 773677575.743445,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Sierra Leone",
+      "iso2": "SL",
+      "currency": "SLE",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 495698793.817761,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Singapore",
+      "iso2": "SG",
+      "currency": "SGD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 383945953550.791,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Sint Maarten",
+      "iso2": "SX",
+      "currency": "ANG",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Slovakia",
+      "iso2": "SK",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 14451734758.1508,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Slovenia",
+      "iso2": "SI",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 2832429184.62503,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Solomon Islands",
+      "iso2": "SB",
+      "currency": "SBD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 688220066.972769,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Somalia",
+      "iso2": "SO",
+      "currency": "SOS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 23109678.975035,
+      "reserves_usd_year": "1989"
+    },
+    {
+      "country": "South Africa",
+      "iso2": "ZA",
+      "currency": "ZAR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 65434957159.2265,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "South Georgia",
+      "iso2": "GS",
+      "currency": "GBP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "South Korea",
+      "iso2": "KR",
+      "currency": "KRW",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 418218648901.669,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "South Sudan",
+      "iso2": "SS",
+      "currency": "SSP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 72880855.2161364,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Spain",
+      "iso2": "ES",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 107774094168.875,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Sri Lanka",
+      "iso2": "LK",
+      "currency": "LKR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 6093946546.37437,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Sudan",
+      "iso2": "SD",
+      "currency": "SDG",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 177933851.813136,
+      "reserves_usd_year": "2017"
+    },
+    {
+      "country": "Suriname",
+      "iso2": "SR",
+      "currency": "SRD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1632317813.39707,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Svalbard and Jan Mayen",
+      "iso2": "SJ",
+      "currency": "NOK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Sweden",
+      "iso2": "SE",
+      "currency": "SEK",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 62569356006.7168,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Switzerland",
+      "iso2": "CH",
+      "currency": "CHF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 909365744096.394,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Syria",
+      "iso2": "SY",
+      "currency": "SYP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 20631907296.8694,
+      "reserves_usd_year": "2010"
+    },
+    {
+      "country": "Taiwan",
+      "iso2": "TW",
+      "currency": "TWD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Tajikistan",
+      "iso2": "TJ",
+      "currency": "TJS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3303825209.68631,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Tanzania",
+      "iso2": "TZ",
+      "currency": "TZS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5049646420.4773,
+      "reserves_usd_year": "2018"
+    },
+    {
+      "country": "Thailand",
+      "iso2": "TH",
+      "currency": "THB",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 236933974075.014,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Timor-Leste",
+      "iso2": "TL",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 736966607.082018,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Togo",
+      "iso2": "TG",
+      "currency": "XOF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Tokelau",
+      "iso2": "TK",
+      "currency": "NZD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Tonga",
+      "iso2": "TO",
+      "currency": "TOP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 377298748.746431,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "iso2": "TT",
+      "currency": "TTD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 5601120709.15512,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Tunisia",
+      "iso2": "TN",
+      "currency": "TND",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 9343597097.75793,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Turkey",
+      "iso2": "TR",
+      "currency": "TRY",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 154773780178.169,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Turkmenistan",
+      "iso2": "TM",
+      "currency": "TMT",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1513006832.36548,
+      "reserves_usd_year": "1999"
+    },
+    {
+      "country": "Turks and Caicos Islands",
+      "iso2": "TC",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Tuvalu",
+      "iso2": "TV",
+      "currency": "AUD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Uganda",
+      "iso2": "UG",
+      "currency": "UGX",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3358514649.90299,
+      "reserves_usd_year": "2018"
+    },
+    {
+      "country": "Ukraine",
+      "iso2": "UA",
+      "currency": "UAH",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 43780549772.8406,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "currency": "AED",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 237931339945.397,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "currency": "GBP",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 174597843325.182,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 910036546651.5,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "United States Minor Outlying Islands",
+      "iso2": "UM",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "United States Virgin Islands",
+      "iso2": "VI",
+      "currency": "USD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Uruguay",
+      "iso2": "UY",
+      "currency": "UYU",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 17377698943.2229,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Uzbekistan",
+      "iso2": "UZ",
+      "currency": "UZS",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 41236890133.3347,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Vanuatu",
+      "iso2": "VU",
+      "currency": "VUV",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 614649778.922429,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Vatican City",
+      "iso2": "VA",
+      "currency": "EUR",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Venezuela",
+      "iso2": "VE",
+      "currency": "VES",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 9794062064.62108,
+      "reserves_usd_year": "2017"
+    },
+    {
+      "country": "Vietnam",
+      "iso2": "VN",
+      "currency": "VND",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 83081854928.1161,
+      "reserves_usd_year": "2024"
+    },
+    {
+      "country": "Wallis and Futuna",
+      "iso2": "WF",
+      "currency": "XPF",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Western Sahara",
+      "iso2": "EH",
+      "currency": "DZD",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": null,
+      "reserves_usd_year": null
+    },
+    {
+      "country": "Yemen",
+      "iso2": "YE",
+      "currency": "YER",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 1250826378.53556,
+      "reserves_usd_year": "2022"
+    },
+    {
+      "country": "Zambia",
+      "iso2": "ZM",
+      "currency": "ZMW",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 3173177777.1366,
+      "reserves_usd_year": "2023"
+    },
+    {
+      "country": "Zimbabwe",
+      "iso2": "ZW",
+      "currency": "ZWL",
+      "reserves_tonnes": null,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T05:42:32.404Z",
+      "sources": [
+        {
+          "name": "REST Countries",
+          "url": "https://restcountries.com/"
+        },
+        {
+          "name": "World Bank API - FI.RES.TOTL.CD (includes gold, current US$)",
+          "url": "https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json"
+        }
+      ],
+      "reserves_usd_including_gold": 484972804.72655,
+      "reserves_usd_year": "2024"
     }
   ]
 }

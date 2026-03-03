@@ -1,0 +1,7 @@
+{
+  "symbol": "XAU/USD",
+  "price_usd": null,
+  "updated_at": "2026-03-03T05:42:32.404Z",
+  "source": "Alpha Vantage",
+  "note": "Set ALPHA_VANTAGE_API_KEY to populate live price."
+}
