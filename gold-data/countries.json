@@ -1,0 +1,68 @@
+{
+  "schema": {
+    "country": "string",
+    "iso2": "string (ISO 3166-1 alpha-2)",
+    "currency": "string (ISO 4217)",
+    "reserves_tonnes": "number|null",
+    "imports_usd": "number|null",
+    "exports_usd": "number|null",
+    "production_tonnes": "number|null",
+    "updated_at": "string (ISO 8601)",
+    "sources": [
+      {
+        "name": "string",
+        "url": "string"
+      }
+    ]
+  },
+  "countries": [
+    {
+      "country": "United States",
+      "iso2": "US",
+      "currency": "USD",
+      "reserves_tonnes": 8133.5,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": 166.7,
+      "updated_at": "2026-03-03T12:15:00+07:00",
+      "sources": [
+        {
+          "name": "World Gold Council - Gold Demand Trends",
+          "url": "https://www.gold.org/goldhub/data"
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "currency": "EUR",
+      "reserves_tonnes": 3351.1,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": null,
+      "updated_at": "2026-03-03T12:15:00+07:00",
+      "sources": [
+        {
+          "name": "Bundesbank / World Gold Council",
+          "url": "https://www.gold.org/goldhub/data"
+        }
+      ]
+    },
+    {
+      "country": "China",
+      "iso2": "CN",
+      "currency": "CNY",
+      "reserves_tonnes": 2264.3,
+      "imports_usd": null,
+      "exports_usd": null,
+      "production_tonnes": 378.2,
+      "updated_at": "2026-03-03T12:15:00+07:00",
+      "sources": [
+        {
+          "name": "China Gold Association / World Gold Council",
+          "url": "https://www.gold.org/goldhub/data"
+        }
+      ]
+    }
+  ]
+}
