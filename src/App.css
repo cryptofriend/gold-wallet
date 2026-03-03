@@ -52,6 +52,36 @@
   font-weight: 700;
 }
 
+.freshness-badge {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+  border: 1px solid;
+  text-align: left;
+}
+
+.freshness-badge.fresh {
+  background: #eef8ea;
+  border-color: #b9d6af;
+  color: #27591d;
+}
+
+.freshness-badge.stale {
+  background: #fff3e6;
+  border-color: #ebc48f;
+  color: #7b4b00;
+}
+
+.freshness-badge.unknown {
+  background: #f1f3f7;
+  border-color: #cfd5df;
+  color: #3f4a5d;
+}
+
 .loading-panel {
   text-align: center;
   color: #6a6353;

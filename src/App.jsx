@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
+import countriesData from '../gold-data/countries.json'
 import './App.css'
 
 const tabs = [
@@ -8,9 +9,56 @@ const tabs = [
   { id: 'my-gold', label: 'My Gold', icon: '▭' },
 ]
 
+function useFreshness() {
+  return useMemo(() => {
+    const updatedDates = (countriesData.countries || [])
+      .map((country) => new Date(country.updated_at).getTime())
+      .filter((value) => Number.isFinite(value))
+
+    const latest = updatedDates.length ? Math.max(...updatedDates) : null
+    const staleAfterMs = 7 * 24 * 60 * 60 * 1000
+
+    if (!latest) {
+      return {
+        status: 'unknown',
+        label: 'Freshness unknown',
+        detail: 'No valid updated_at found in dataset.',
+      }
+    }
+
+    const ageMs = Date.now() - latest
+
+    if (ageMs <= staleAfterMs) {
+      return {
+        status: 'fresh',
+        label: 'Data fresh',
+        detail: `Last sync: ${new Date(latest).toLocaleString()}`,
+      }
+    }
+
+    return {
+      status: 'stale',
+      label: 'Using last-known snapshot',
+      detail: `Latest update is stale (${new Date(latest).toLocaleString()}).`,
+    }
+  }, [])
+}
+
+function FreshnessBadge() {
+  const freshness = useFreshness()
+
+  return (
+    <div className={`freshness-badge ${freshness.status}`}>
+      <strong>{freshness.label}</strong>
+      <span>{freshness.detail}</span>
+    </div>
+  )
+}
+
 function MethodologyPage() {
   return (
     <main className="doc-page">
+      <FreshnessBadge />
       <h1>Methodology</h1>
       <p>
         Gold Wallet aggregates public datasets into a unified country-level gold market schema designed for
@@ -42,6 +90,7 @@ function MethodologyPage() {
 function DataSourcesPage() {
   return (
     <main className="doc-page">
+      <FreshnessBadge />
       <h1>Data Sources</h1>
       <p>Current source registry and cadence notes.</p>
 
@@ -103,6 +152,7 @@ function HomePage() {
       </div>
 
       <section className="loading-panel" aria-live="polite">
+        <FreshnessBadge />
         <div className="spinner-wrap">
           <div className="spinner" />
         </div>
