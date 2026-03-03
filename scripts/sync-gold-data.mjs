@@ -5,6 +5,8 @@ import path from 'node:path'
 
 const WORLD_BANK_COUNTRY_API = 'https://api.worldbank.org/v2/country?format=json&per_page=400'
 const WORLD_BANK_RESERVES_API = 'https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json&per_page=20000'
+const WORLD_BANK_IMPORTS_API = 'https://api.worldbank.org/v2/country/all/indicator/TM.VAL.MRCH.CD.WT?format=json&per_page=20000'
+const WORLD_BANK_EXPORTS_API = 'https://api.worldbank.org/v2/country/all/indicator/TX.VAL.MRCH.CD.WT?format=json&per_page=20000'
 const REST_COUNTRIES_API =
   'https://restcountries.com/v3.1/all?fields=name,cca2,cca3,currencies,independent,unMember,region'
 
@@ -16,7 +18,6 @@ const outDir = path.join(repoRoot, 'gold-data')
 const countriesOut = path.join(outDir, 'countries.json')
 const priceOut = path.join(outDir, 'price.json')
 const productionSeedPath = path.join(outDir, 'production-seed.json')
-const tradeCachePath = path.join(outDir, 'trade-cache.json')
 
 const nowIso = new Date().toISOString()
 
@@ -40,7 +41,7 @@ const readJsonIfExists = async (filePath) => {
   }
 }
 
-const mapLatestReservesByIso3 = (rows) => {
+const mapLatestIndicatorByIso3 = (rows) => {
   const byIso3 = new Map()
 
   for (const row of rows) {
@@ -72,19 +73,27 @@ const normalizeCurrency = (currencies) => {
 }
 
 const main = async () => {
-  const [restCountries, wbCountriesPayload, wbReservesPayload] = await Promise.all([
+  const [
+    restCountries,
+    wbCountriesPayload,
+    wbReservesPayload,
+    wbImportsPayload,
+    wbExportsPayload,
+  ] = await Promise.all([
     fetchJson(REST_COUNTRIES_API),
     fetchJson(WORLD_BANK_COUNTRY_API),
     fetchJson(WORLD_BANK_RESERVES_API),
+    fetchJson(WORLD_BANK_IMPORTS_API),
+    fetchJson(WORLD_BANK_EXPORTS_API),
   ])
 
   const wbCountries = wbCountriesPayload?.[1] || []
   const wbReserves = wbReservesPayload?.[1] || []
+  const wbImports = wbImportsPayload?.[1] || []
+  const wbExports = wbExportsPayload?.[1] || []
   const productionSeed = await readJsonIfExists(productionSeedPath)
-  const tradeCache = await readJsonIfExists(tradeCachePath)
 
   const productionByIso2 = productionSeed?.production_tonnes_by_iso2 || {}
-  const tradeByIso2 = tradeCache?.trade_usd_by_iso2 || {}
 
   const wbIso2ToIso3 = new Map(
     wbCountries
@@ -92,7 +101,9 @@ const main = async () => {
       .map((entry) => [entry.iso2Code.toUpperCase(), entry.id.toUpperCase()]),
   )
 
-  const reservesByIso3 = mapLatestReservesByIso3(wbReserves)
+  const reservesByIso3 = mapLatestIndicatorByIso3(wbReserves)
+  const importsByIso3 = mapLatestIndicatorByIso3(wbImports)
+  const exportsByIso3 = mapLatestIndicatorByIso3(wbExports)
 
   const countryRecords = restCountries
     .filter((country) => country?.cca2 && country?.name?.common)
@@ -101,7 +112,8 @@ const main = async () => {
       const iso3 = (country.cca3 || wbIso2ToIso3.get(iso2) || '').toUpperCase() || null
       const reserves = iso3 ? reservesByIso3.get(iso3) : null
 
-      const trade = tradeByIso2[iso2] || {}
+      const imports = iso3 ? importsByIso3.get(iso3) : null
+      const exports = iso3 ? exportsByIso3.get(iso3) : null
       const seededProduction = productionByIso2[iso2]
 
       return {
@@ -109,8 +121,8 @@ const main = async () => {
         iso2,
         currency: normalizeCurrency(country.currencies),
         reserves_tonnes: null,
-        imports_usd: typeof trade.imports_usd === 'number' ? trade.imports_usd : null,
-        exports_usd: typeof trade.exports_usd === 'number' ? trade.exports_usd : null,
+        imports_usd: imports?.value ?? null,
+        exports_usd: exports?.value ?? null,
         production_tonnes: typeof seededProduction === 'number' ? seededProduction : null,
         updated_at: nowIso,
         sources: [
@@ -123,8 +135,12 @@ const main = async () => {
             url: 'https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.CD?format=json',
           },
           {
-            name: 'UN Comtrade (trade cache, optional)',
-            url: 'https://comtradeplus.un.org/',
+            name: 'World Bank API - TM.VAL.MRCH.CD.WT (merchandise imports, current US$)',
+            url: 'https://api.worldbank.org/v2/country/all/indicator/TM.VAL.MRCH.CD.WT?format=json',
+          },
+          {
+            name: 'World Bank API - TX.VAL.MRCH.CD.WT (merchandise exports, current US$)',
+            url: 'https://api.worldbank.org/v2/country/all/indicator/TX.VAL.MRCH.CD.WT?format=json',
           },
           {
             name: productionSeed?.source?.name || 'USGS production seed',
@@ -135,6 +151,8 @@ const main = async () => {
         ],
         reserves_usd_including_gold: reserves?.value ?? null,
         reserves_usd_year: reserves?.date ?? null,
+        imports_usd_year: imports?.date ?? null,
+        exports_usd_year: exports?.date ?? null,
       }
     })
     .sort((a, b) => a.country.localeCompare(b.country))
@@ -152,6 +170,8 @@ const main = async () => {
       sources: [{ name: 'string', url: 'string' }],
       reserves_usd_including_gold: 'number|null',
       reserves_usd_year: 'string|null',
+      imports_usd_year: 'string|null',
+      exports_usd_year: 'string|null',
     },
     generated_at: nowIso,
     countries_count: countryRecords.length,

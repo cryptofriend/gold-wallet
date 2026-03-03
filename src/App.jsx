@@ -153,12 +153,14 @@ function CountryPage({ slug }) {
           <p>{formatNumber(country.reserves_tonnes)}</p>
         </article>
         <article className="metric-card">
-          <h2>Imports (USD)</h2>
+          <h2>Merchandise imports (USD proxy)</h2>
           <p>{formatMoney(country.imports_usd)}</p>
+          <small>Year: {country.imports_usd_year || 'N/A'}</small>
         </article>
         <article className="metric-card">
-          <h2>Exports (USD)</h2>
+          <h2>Merchandise exports (USD proxy)</h2>
           <p>{formatMoney(country.exports_usd)}</p>
+          <small>Year: {country.exports_usd_year || 'N/A'}</small>
         </article>
         <article className="metric-card">
           <h2>Production (tonnes)</h2>

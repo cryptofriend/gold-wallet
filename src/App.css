@@ -115,6 +115,12 @@
   font-weight: 700;
 }
 
+.metric-card small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #6a5d43;
+}
+
 .sources-section {
   margin-top: 1rem;
 }
