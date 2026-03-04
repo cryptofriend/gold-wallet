@@ -135,6 +135,51 @@
   border-radius: 8px;
 }
 
+.ranking-links {
+  margin: 0.8rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ranking-links a {
+  border: 1px solid #dccca7;
+  background: #fff7df;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  text-decoration: none;
+}
+
+.ranking-list {
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.ranking-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+}
+
+.trend-placeholder {
+  margin: 0.8rem 0;
+  border: 1px dashed #d2bd8b;
+  background: #fff9ea;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+}
+
+.trend-placeholder h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.trend-placeholder p {
+  margin: 0;
+  color: #6a5a3f;
+}
+
 .confidence-pill {
   display: inline-block;
   margin: 0.65rem 0 0.4rem;

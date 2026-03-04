@@ -307,6 +307,11 @@ function CountriesIndexPage() {
       <FreshnessBadge />
       <h1>Countries</h1>
       <p>{countries.length} country pages available.</p>
+      <div className="ranking-links">
+        <a href="/rankings/reserves">Top Reserves</a>
+        <a href="/rankings/production">Top Production</a>
+        <a href="/rankings/imports">Top Imports</a>
+      </div>
       <div className="countries-grid">
         {countries.slice(0, 120).map((country) => (
           <a key={country.iso2} className="country-pill" href={`/countries/${slugify(country.country)}`}>
@@ -351,6 +356,12 @@ function CountryPage({ slug }) {
       <p className={`confidence-pill ${confidence.level.toLowerCase()}`}>
         Confidence: {confidence.level} ({confidence.score}/100)
       </p>
+
+      <section className="trend-placeholder">
+        <h2>Trend placeholders</h2>
+        <p>Historical reserves, imports, exports, and production charts are queued for the next data pass.</p>
+      </section>
+
       <ul>
         <li>ISO2: {country.iso2}</li>
         <li>Currency: {country.currency || 'N/A'}</li>
@@ -366,6 +377,58 @@ function CountryPage({ slug }) {
   )
 }
 
+function RankingsPage({ metric }) {
+  const countries = countriesData.countries || []
+
+  const config = {
+    reserves: {
+      field: 'reserves_usd_including_gold',
+      title: 'Top Countries by Reserves (USD incl. gold)',
+    },
+    production: {
+      field: 'production_tonnes',
+      title: 'Top Countries by Gold Production (tonnes)',
+    },
+    imports: {
+      field: 'imports_usd',
+      title: 'Top Countries by Imports (USD proxy)',
+    },
+  }[metric]
+
+  if (!config) {
+    usePageMeta('Ranking not found | Gold Wallet', 'Requested ranking page was not found.')
+    return (
+      <main className="doc-page">
+        <h1>Ranking not found</h1>
+        <a href="/countries">Back to countries</a>
+      </main>
+    )
+  }
+
+  const top = [...countries]
+    .filter((c) => typeof c[config.field] === 'number')
+    .sort((a, b) => b[config.field] - a[config.field])
+    .slice(0, 20)
+
+  usePageMeta(`${config.title} | Gold Wallet`, `Top 20 countries ranked by ${config.field}.`)
+
+  return (
+    <main className="doc-page">
+      <FreshnessBadge />
+      <a href="/countries">← Back to countries</a>
+      <h1>{config.title}</h1>
+      <ol className="ranking-list">
+        {top.map((country) => (
+          <li key={country.iso2}>
+            <a href={`/countries/${slugify(country.country)}`}>{country.country}</a>
+            <span>{config.field.includes('tonnes') ? country[config.field] : formatMoney(country[config.field])}</span>
+          </li>
+        ))}
+      </ol>
+    </main>
+  )
+}
+
 function HomePage() {
   usePageMeta('Gold Wallet', 'Modern gold market intelligence with transparent data sourcing.')
   const [activeTab, setActiveTab] = useState('globe')
@@ -377,6 +440,7 @@ function HomePage() {
         <a href="/data-sources">Data Sources</a>
         <a href="/price/gold/usd/ounce">Gold Price</a>
         <a href="/countries">Countries</a>
+        <a href="/rankings/reserves">Rankings</a>
       </div>
 
       <section className="loading-panel" aria-live="polite">
@@ -417,6 +481,10 @@ function App() {
   if (path === '/methodology') return <MethodologyPage />
   if (path === '/data-sources') return <DataSourcesPage />
   if (path === '/countries') return <CountriesIndexPage />
+  if (path.startsWith('/rankings/')) {
+    const metric = path.replace('/rankings/', '').replace(/\/$/, '')
+    return <RankingsPage metric={metric} />
+  }
   if (path.startsWith('/countries/')) {
     const slug = path.replace('/countries/', '').replace(/\/$/, '')
     return <CountryPage slug={slug} />
