@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://goldwallet.com/sitemaps/sitemap-core.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://goldwallet.com/sitemaps/sitemap-price-currency.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://goldwallet.com/sitemaps/sitemap-price-unit.xml</loc>
+  </sitemap>
+</sitemapindex>
