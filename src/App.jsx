@@ -41,6 +41,20 @@ const slugify = (value) =>
 const formatMoney = (value) =>
   typeof value === 'number' ? `$${Math.round(value).toLocaleString()}` : 'N/A'
 
+const getConfidence = (country) => {
+  let score = 0
+
+  if (typeof country.reserves_usd_including_gold === 'number') score += 30
+  if (typeof country.imports_usd === 'number') score += 20
+  if (typeof country.exports_usd === 'number') score += 20
+  if (typeof country.production_tonnes === 'number') score += 20
+  if (Array.isArray(country.sources) && country.sources.length > 0) score += 10
+
+  if (score >= 80) return { level: 'High', score }
+  if (score >= 50) return { level: 'Medium', score }
+  return { level: 'Low', score }
+}
+
 const UNIT_MULTIPLIERS = {
   ounce: 1,
   oz: 1,
@@ -324,6 +338,7 @@ function CountryPage({ slug }) {
   )} exports, and production at ${
     typeof country.production_tonnes === 'number' ? `${country.production_tonnes} tonnes` : 'N/A'
   }.`
+  const confidence = getConfidence(country)
 
   usePageMeta(`${country.country} Gold Market Snapshot | Gold Wallet`, summary)
 
@@ -333,6 +348,9 @@ function CountryPage({ slug }) {
       <a href="/countries">← Back to countries</a>
       <h1>{country.country}</h1>
       <p className="summary-block">{summary}</p>
+      <p className={`confidence-pill ${confidence.level.toLowerCase()}`}>
+        Confidence: {confidence.level} ({confidence.score}/100)
+      </p>
       <ul>
         <li>ISO2: {country.iso2}</li>
         <li>Currency: {country.currency || 'N/A'}</li>

@@ -135,6 +135,34 @@
   border-radius: 8px;
 }
 
+.confidence-pill {
+  display: inline-block;
+  margin: 0.65rem 0 0.4rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid;
+}
+
+.confidence-pill.high {
+  background: #e9f8ea;
+  border-color: #b7dcb8;
+  color: #1f5a20;
+}
+
+.confidence-pill.medium {
+  background: #fff8e7;
+  border-color: #e7cf94;
+  color: #785400;
+}
+
+.confidence-pill.low {
+  background: #ffecec;
+  border-color: #efb1b1;
+  color: #7a1d1d;
+}
+
 .loading-panel {
   text-align: center;
   color: #6a6353;
