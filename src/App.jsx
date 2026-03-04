@@ -163,6 +163,40 @@ function FreshnessBadge() {
   )
 }
 
+function TrustPanel({ confidence, sources = [], note }) {
+  return (
+    <section className="trust-panel" aria-label="Trust and source information">
+      <div className="trust-head">
+        <h3>Trust Panel</h3>
+        {confidence ? (
+          <span className={`confidence-pill ${confidence.level.toLowerCase()}`}>
+            Confidence: {confidence.level} ({confidence.score}/100)
+          </span>
+        ) : null}
+      </div>
+
+      {note ? <p className="trust-note">{note}</p> : null}
+
+      <details>
+        <summary>View source links</summary>
+        <ul>
+          {sources.length ? (
+            sources.map((source) => (
+              <li key={`${source.name}-${source.url}`}>
+                <a href={source.url} target="_blank" rel="noreferrer">
+                  {source.name}
+                </a>
+              </li>
+            ))
+          ) : (
+            <li>No source links listed for this section.</li>
+          )}
+        </ul>
+      </details>
+    </section>
+  )
+}
+
 function PrimaryNav() {
   return (
     <div className="top-links">
@@ -317,6 +351,10 @@ function PriceCurrencyPage({ currencyCode, unitCode = 'ounce' }) {
   }
 
   const goldPrice = FALLBACK_XAU_USD * rate * unitMultiplier
+  const priceSources = [
+    { name: 'Alpha Vantage (intended live feed)', url: 'https://www.alphavantage.co/' },
+    { name: 'Fallback base reference (internal config)', url: '/methodology' },
+  ]
 
   return (
     <main className="doc-page">
@@ -341,6 +379,11 @@ function PriceCurrencyPage({ currencyCode, unitCode = 'ounce' }) {
         Base reference: ${FALLBACK_XAU_USD.toLocaleString()} XAU/USD, converted with FX rate ({rate}) and
         unit multiplier ({unitMultiplier.toFixed(6)}).
       </p>
+
+      <TrustPanel
+        note="Price display uses configured fallback unless live API feed is connected."
+        sources={priceSources}
+      />
 
       <div className="currency-links">
         {Object.keys(FX_RATES).map((c) => (
@@ -462,9 +505,11 @@ function CountryPage({ routeKey }) {
       </div>
 
       <p className="summary-block">{summary}</p>
-      <p className={`confidence-pill ${confidence.level.toLowerCase()}`}>
-        Confidence: {confidence.level} ({confidence.score}/100)
-      </p>
+      <TrustPanel
+        confidence={confidence}
+        sources={country.sources}
+        note="Confidence score is based on field completeness and source presence."
+      />
 
       <section className="metrics-grid-scan" aria-label="Key metrics">
         <MetricCard

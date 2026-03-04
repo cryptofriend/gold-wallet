@@ -294,6 +294,45 @@
   color: #7a1d1d;
 }
 
+.trust-panel {
+  margin: 0.75rem 0 0.9rem;
+  border: 1px solid #e3d6b8;
+  background: #fffcf3;
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+}
+
+.trust-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.trust-head h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4f3e1a;
+}
+
+.trust-note {
+  margin: 0.4rem 0;
+  color: #5f5236;
+  font-size: 0.9rem;
+}
+
+.trust-panel details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #6b4f13;
+}
+
+.trust-panel ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1rem;
+}
+
 .loading-panel {
   text-align: center;
   color: #6a6353;
