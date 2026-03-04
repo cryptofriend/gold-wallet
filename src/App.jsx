@@ -38,6 +38,8 @@ const slugify = (value) =>
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
 
+const countryPath = (country) => `/countries/${country.iso2.toLowerCase()}-${slugify(country.country)}`
+
 const formatMoney = (value) =>
   typeof value === 'number' ? `$${Math.round(value).toLocaleString()}` : 'N/A'
 
@@ -313,8 +315,8 @@ function CountriesIndexPage() {
         <a href="/rankings/imports">Top Imports</a>
       </div>
       <div className="countries-grid">
-        {countries.slice(0, 120).map((country) => (
-          <a key={country.iso2} className="country-pill" href={`/countries/${slugify(country.country)}`}>
+        {countries.map((country) => (
+          <a key={country.iso2} className="country-pill" href={countryPath(country)}>
             {country.country}
           </a>
         ))}
@@ -323,8 +325,11 @@ function CountriesIndexPage() {
   )
 }
 
-function CountryPage({ slug }) {
-  const country = (countriesData.countries || []).find((c) => slugify(c.country) === slug)
+function CountryPage({ routeKey }) {
+  const [iso2Part] = routeKey.split('-')
+  const iso2 = (iso2Part || '').toUpperCase()
+
+  const country = (countriesData.countries || []).find((c) => c.iso2 === iso2)
 
   if (!country) {
     usePageMeta('Country not found | Gold Wallet', 'Requested country page was not found.')
@@ -338,9 +343,11 @@ function CountryPage({ slug }) {
 
   const summary = `${country.country} currently reports ${formatMoney(
     country.reserves_usd_including_gold,
-  )} in reserves (including gold), ${formatMoney(country.imports_usd)} imports, ${formatMoney(
+  )} in reserves (including gold, ${country.reserves_usd_year || 'latest available year'}), ${formatMoney(
+    country.imports_usd,
+  )} merchandise imports (${country.imports_usd_year || 'N/A'}), ${formatMoney(
     country.exports_usd,
-  )} exports, and production at ${
+  )} merchandise exports (${country.exports_usd_year || 'N/A'}), and production at ${
     typeof country.production_tonnes === 'number' ? `${country.production_tonnes} tonnes` : 'N/A'
   }.`
   const confidence = getConfidence(country)
@@ -366,8 +373,12 @@ function CountryPage({ slug }) {
         <li>ISO2: {country.iso2}</li>
         <li>Currency: {country.currency || 'N/A'}</li>
         <li>Reserves (USD incl. gold): {formatMoney(country.reserves_usd_including_gold)}</li>
-        <li>Imports (USD proxy): {formatMoney(country.imports_usd)}</li>
-        <li>Exports (USD proxy): {formatMoney(country.exports_usd)}</li>
+        <li>
+          Imports (USD proxy): {formatMoney(country.imports_usd)} {country.imports_usd_year ? `(year ${country.imports_usd_year})` : ''}
+        </li>
+        <li>
+          Exports (USD proxy): {formatMoney(country.exports_usd)} {country.exports_usd_year ? `(year ${country.exports_usd_year})` : ''}
+        </li>
         <li>
           Production (tonnes):{' '}
           {typeof country.production_tonnes === 'number' ? country.production_tonnes : 'N/A'}
@@ -420,7 +431,7 @@ function RankingsPage({ metric }) {
       <ol className="ranking-list">
         {top.map((country) => (
           <li key={country.iso2}>
-            <a href={`/countries/${slugify(country.country)}`}>{country.country}</a>
+            <a href={countryPath(country)}>{country.country}</a>
             <span>{config.field.includes('tonnes') ? country[config.field] : formatMoney(country[config.field])}</span>
           </li>
         ))}
@@ -486,8 +497,8 @@ function App() {
     return <RankingsPage metric={metric} />
   }
   if (path.startsWith('/countries/')) {
-    const slug = path.replace('/countries/', '').replace(/\/$/, '')
-    return <CountryPage slug={slug} />
+    const routeKey = path.replace('/countries/', '').replace(/\/$/, '')
+    return <CountryPage routeKey={routeKey} />
   }
 
   if (path.startsWith('/price/gold/')) {
