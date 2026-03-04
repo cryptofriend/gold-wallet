@@ -393,6 +393,16 @@ function CountriesIndexPage() {
   )
 }
 
+function MetricCard({ label, value, hint }) {
+  return (
+    <article className="metric-card">
+      <h3>{label}</h3>
+      <p>{value}</p>
+      {hint ? <small>{hint}</small> : null}
+    </article>
+  )
+}
+
 function CountryPage({ routeKey }) {
   const [iso2Part] = routeKey.split('-')
   const iso2 = (iso2Part || '').toUpperCase()
@@ -446,31 +456,42 @@ function CountryPage({ routeKey }) {
       <FreshnessBadge />
       <a href="/countries">← Back to countries</a>
       <h1>{country.country}</h1>
+      <div className="country-subhead">
+        <span>ISO2: {country.iso2}</span>
+        <span>Currency: {country.currency || 'N/A'}</span>
+      </div>
+
       <p className="summary-block">{summary}</p>
       <p className={`confidence-pill ${confidence.level.toLowerCase()}`}>
         Confidence: {confidence.level} ({confidence.score}/100)
       </p>
 
+      <section className="metrics-grid-scan" aria-label="Key metrics">
+        <MetricCard
+          label="Reserves (USD incl. gold)"
+          value={formatMoney(country.reserves_usd_including_gold)}
+          hint={country.reserves_usd_year ? `Year ${country.reserves_usd_year}` : 'Year N/A'}
+        />
+        <MetricCard
+          label="Imports (USD proxy)"
+          value={formatMoney(country.imports_usd)}
+          hint={country.imports_usd_year ? `Year ${country.imports_usd_year}` : 'Year N/A'}
+        />
+        <MetricCard
+          label="Exports (USD proxy)"
+          value={formatMoney(country.exports_usd)}
+          hint={country.exports_usd_year ? `Year ${country.exports_usd_year}` : 'Year N/A'}
+        />
+        <MetricCard
+          label="Production (tonnes)"
+          value={typeof country.production_tonnes === 'number' ? country.production_tonnes.toLocaleString() : 'N/A'}
+        />
+      </section>
+
       <section className="trend-placeholder">
         <h2>Trend placeholders</h2>
         <p>Historical reserves, imports, exports, and production charts are queued for the next data pass.</p>
       </section>
-
-      <ul>
-        <li>ISO2: {country.iso2}</li>
-        <li>Currency: {country.currency || 'N/A'}</li>
-        <li>Reserves (USD incl. gold): {formatMoney(country.reserves_usd_including_gold)}</li>
-        <li>
-          Imports (USD proxy): {formatMoney(country.imports_usd)} {country.imports_usd_year ? `(year ${country.imports_usd_year})` : ''}
-        </li>
-        <li>
-          Exports (USD proxy): {formatMoney(country.exports_usd)} {country.exports_usd_year ? `(year ${country.exports_usd_year})` : ''}
-        </li>
-        <li>
-          Production (tonnes):{' '}
-          {typeof country.production_tonnes === 'number' ? country.production_tonnes : 'N/A'}
-        </li>
-      </ul>
     </main>
   )
 }
