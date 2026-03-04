@@ -17,6 +17,10 @@
   right: 1rem;
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: min(90vw, 740px);
+  z-index: 20;
 }
 
 .top-links a {
@@ -50,6 +54,45 @@
 .doc-page a {
   color: #765711;
   font-weight: 700;
+}
+
+.breadcrumbs {
+  margin: 2.8rem 0 0.6rem;
+  font-size: 0.9rem;
+  color: #6b5b39;
+}
+
+.breadcrumbs a {
+  color: #7a5a13;
+  text-decoration: none;
+}
+
+.quick-flow {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.quick-flow a {
+  border: 1px solid #dccca7;
+  background: #fff7df;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  text-decoration: none;
+  color: #614914;
+  font-weight: 700;
+}
+
+.metrics-raw {
+  overflow: auto;
+  max-height: 320px;
+  background: #fff8e9;
+  border: 1px solid #e4d2ac;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-size: 0.78rem;
 }
 
 .price-line {

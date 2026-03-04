@@ -75,6 +75,33 @@ const UNIT_LABELS = {
   kg: 'kilogram',
 }
 
+const UX_METRICS_KEY = 'gold-wallet-ux-metrics-v1'
+
+const trackUx = (event, data = {}) => {
+  try {
+    const raw = localStorage.getItem(UX_METRICS_KEY)
+    const state = raw
+      ? JSON.parse(raw)
+      : { firstSessionAt: Date.now(), pageViews: {}, events: [], countryFirstInsightSeconds: [] }
+
+    if (event === 'page_view') {
+      const path = data.path || '/'
+      state.pageViews[path] = (state.pageViews[path] || 0) + 1
+    }
+
+    if (event === 'country_first_insight' && typeof data.seconds === 'number') {
+      state.countryFirstInsightSeconds.push(data.seconds)
+    }
+
+    state.events.push({ event, at: Date.now(), ...data })
+    state.events = state.events.slice(-200)
+
+    localStorage.setItem(UX_METRICS_KEY, JSON.stringify(state))
+  } catch {
+    // noop
+  }
+}
+
 function usePageMeta(title, description) {
   useEffect(() => {
     document.title = title
@@ -136,11 +163,40 @@ function FreshnessBadge() {
   )
 }
 
+function PrimaryNav() {
+  return (
+    <div className="top-links">
+      <a href="/">Home</a>
+      <a href="/price/gold/usd/ounce">Gold Price</a>
+      <a href="/countries">Countries</a>
+      <a href="/rankings/reserves">Rankings</a>
+      <a href="/methodology">Methodology</a>
+      <a href="/data-sources">Data Sources</a>
+      <a href="/ux-metrics">UX Metrics</a>
+    </div>
+  )
+}
+
+function Breadcrumbs({ items }) {
+  return (
+    <nav className="breadcrumbs" aria-label="Breadcrumb">
+      {items.map((item, idx) => (
+        <span key={`${item.label}-${idx}`}>
+          {item.href ? <a href={item.href}>{item.label}</a> : <strong>{item.label}</strong>}
+          {idx < items.length - 1 ? ' / ' : ''}
+        </span>
+      ))}
+    </nav>
+  )
+}
+
 function MethodologyPage() {
   usePageMeta('Gold Wallet Methodology', 'How Gold Wallet aggregates and normalizes market data.')
 
   return (
     <main className="doc-page">
+      <PrimaryNav />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Methodology' }]} />
       <FreshnessBadge />
       <h1>Methodology</h1>
       <p>
@@ -175,6 +231,8 @@ function DataSourcesPage() {
 
   return (
     <main className="doc-page">
+      <PrimaryNav />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Data Sources' }]} />
       <FreshnessBadge />
       <h1>Data Sources</h1>
       <p>Current source registry and cadence notes.</p>
@@ -262,6 +320,14 @@ function PriceCurrencyPage({ currencyCode, unitCode = 'ounce' }) {
 
   return (
     <main className="doc-page">
+      <PrimaryNav />
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Gold Price', href: '/price/gold/usd/ounce' },
+          { label: `${code.toUpperCase()} / ${unitLabel}` },
+        ]}
+      />
       <FreshnessBadge />
       <h1>
         Gold Price ({code.toUpperCase()}) / {unitLabel}
@@ -306,6 +372,8 @@ function CountriesIndexPage() {
 
   return (
     <main className="doc-page">
+      <PrimaryNav />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Countries' }]} />
       <FreshnessBadge />
       <h1>Countries</h1>
       <p>{countries.length} country pages available.</p>
@@ -331,10 +399,21 @@ function CountryPage({ routeKey }) {
 
   const country = (countriesData.countries || []).find((c) => c.iso2 === iso2)
 
+  useEffect(() => {
+    if (!country) return
+    const raw = sessionStorage.getItem('gold-wallet-session-start-at')
+    const start = raw ? Number(raw) : Date.now()
+    const seconds = Math.max(1, Math.round((Date.now() - start) / 1000))
+    trackUx('country_first_insight', { country: country.iso2, seconds })
+    trackUx('country_page_open', { country: country.iso2 })
+  }, [country])
+
   if (!country) {
     usePageMeta('Country not found | Gold Wallet', 'Requested country page was not found.')
     return (
       <main className="doc-page">
+        <PrimaryNav />
+        <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Countries', href: '/countries' }, { label: 'Not found' }]} />
         <h1>Country not found</h1>
         <a href="/countries">Back to countries</a>
       </main>
@@ -356,6 +435,14 @@ function CountryPage({ routeKey }) {
 
   return (
     <main className="doc-page">
+      <PrimaryNav />
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Countries', href: '/countries' },
+          { label: country.country },
+        ]}
+      />
       <FreshnessBadge />
       <a href="/countries">← Back to countries</a>
       <h1>{country.country}</h1>
@@ -425,6 +512,8 @@ function RankingsPage({ metric }) {
 
   return (
     <main className="doc-page">
+      <PrimaryNav />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Rankings', href: '/rankings/reserves' }, { label: metric }]} />
       <FreshnessBadge />
       <a href="/countries">← Back to countries</a>
       <h1>{config.title}</h1>
@@ -440,19 +529,53 @@ function RankingsPage({ metric }) {
   )
 }
 
+function UxMetricsPage() {
+  const [snapshot, setSnapshot] = useState(null)
+
+  usePageMeta('UX Metrics | Gold Wallet', 'Local UX loop metrics for improve-test-measure iterations.')
+
+  useEffect(() => {
+    const raw = localStorage.getItem(UX_METRICS_KEY)
+    setSnapshot(raw ? JSON.parse(raw) : null)
+  }, [])
+
+  const avgFirstInsight = snapshot?.countryFirstInsightSeconds?.length
+    ? Math.round(
+        snapshot.countryFirstInsightSeconds.reduce((a, b) => a + b, 0) /
+          snapshot.countryFirstInsightSeconds.length,
+      )
+    : null
+
+  return (
+    <main className="doc-page">
+      <PrimaryNav />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'UX Metrics' }]} />
+      <h1>UX Metrics (Local)</h1>
+      <p>Used for the Improve → Test → Measure loop. Stored in this browser only.</p>
+
+      <ul>
+        <li>Tracked page types: {snapshot ? Object.keys(snapshot.pageViews || {}).length : 0}</li>
+        <li>
+          Country page opens: {snapshot?.events?.filter((e) => e.event === 'country_page_open').length || 0}
+        </li>
+        <li>Avg time to first country insight: {avgFirstInsight ? `${avgFirstInsight}s` : 'N/A'}</li>
+      </ul>
+
+      <details>
+        <summary>Raw metrics JSON</summary>
+        <pre className="metrics-raw">{JSON.stringify(snapshot, null, 2)}</pre>
+      </details>
+    </main>
+  )
+}
+
 function HomePage() {
   usePageMeta('Gold Wallet', 'Modern gold market intelligence with transparent data sourcing.')
   const [activeTab, setActiveTab] = useState('globe')
 
   return (
     <main className="earth-shell">
-      <div className="top-links">
-        <a href="/methodology">Methodology</a>
-        <a href="/data-sources">Data Sources</a>
-        <a href="/price/gold/usd/ounce">Gold Price</a>
-        <a href="/countries">Countries</a>
-        <a href="/rankings/reserves">Rankings</a>
-      </div>
+      <PrimaryNav />
 
       <section className="loading-panel" aria-live="polite">
         <FreshnessBadge />
@@ -461,6 +584,12 @@ function HomePage() {
         </div>
         <p className="loading-title">Loading gold reserves data...</p>
         <p className="loading-subtitle">Fetching data from World Bank API...</p>
+
+        <div className="quick-flow">
+          <a href="/price/gold/usd/ounce">1) Check Gold Price</a>
+          <a href="/countries">2) Explore Countries</a>
+          <a href="/countries/us-united-states">3) Open a Country Snapshot</a>
+        </div>
       </section>
 
       <nav className="dock" aria-label="Primary">
@@ -489,8 +618,16 @@ function HomePage() {
 function App() {
   const path = window.location.pathname
 
+  useEffect(() => {
+    if (!sessionStorage.getItem('gold-wallet-session-start-at')) {
+      sessionStorage.setItem('gold-wallet-session-start-at', String(Date.now()))
+    }
+    trackUx('page_view', { path })
+  }, [path])
+
   if (path === '/methodology') return <MethodologyPage />
   if (path === '/data-sources') return <DataSourcesPage />
+  if (path === '/ux-metrics') return <UxMetricsPage />
   if (path === '/countries') return <CountriesIndexPage />
   if (path.startsWith('/rankings/')) {
     const metric = path.replace('/rankings/', '').replace(/\/$/, '')
