@@ -17,6 +17,10 @@
   right: 1rem;
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: min(90vw, 740px);
+  z-index: 20;
 }
 
 .top-links a {
@@ -50,6 +54,45 @@
 .doc-page a {
   color: #765711;
   font-weight: 700;
+}
+
+.breadcrumbs {
+  margin: 2.8rem 0 0.6rem;
+  font-size: 0.9rem;
+  color: #6b5b39;
+}
+
+.breadcrumbs a {
+  color: #7a5a13;
+  text-decoration: none;
+}
+
+.quick-flow {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.quick-flow a {
+  border: 1px solid #dccca7;
+  background: #fff7df;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  text-decoration: none;
+  color: #614914;
+  font-weight: 700;
+}
+
+.metrics-raw {
+  overflow: auto;
+  max-height: 320px;
+  background: #fff8e9;
+  border: 1px solid #e4d2ac;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-size: 0.78rem;
 }
 
 .price-line {
@@ -133,6 +176,49 @@
   background: #fff8e6;
   padding: 0.65rem 0.75rem;
   border-radius: 8px;
+  position: sticky;
+  top: 3.6rem;
+  z-index: 5;
+}
+
+.country-subhead {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  color: #65583e;
+  margin: -0.2rem 0 0.7rem;
+  font-size: 0.95rem;
+}
+
+.metrics-grid-scan {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.6rem;
+}
+
+.metric-card {
+  border: 1px solid #e1d2ae;
+  background: #fffdf7;
+  border-radius: 10px;
+  padding: 0.65rem 0.7rem;
+}
+
+.metric-card h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #61523a;
+}
+
+.metric-card p {
+  margin: 0.35rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #3c2f17;
+}
+
+.metric-card small {
+  color: #77664a;
 }
 
 .ranking-links {

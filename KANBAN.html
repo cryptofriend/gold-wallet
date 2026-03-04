@@ -101,7 +101,7 @@
     <section class="board" id="board"></section>
 
     <script>
-      const STORAGE_KEY = 'gold-wallet-kanban-v8'
+      const STORAGE_KEY = 'gold-wallet-kanban-v10'
 
       const columns = ['Backlog', 'Ready', 'In Progress', 'Review', 'Done']
 
@@ -121,11 +121,11 @@
         { id: 'w4-2', title: 'Watchlist MVP', tags: ['Retention', 'Week 4'], status: 'Backlog' },
         { id: 'w4-3', title: 'Public API beta', tags: ['Distribution', 'Week 4'], status: 'Backlog' },
 
-        { id: 'ux-1', title: 'UX Loop: nav clarity pass (home → countries → country)', tags: ['UX Loop', 'Week A'], status: 'Ready' },
-        { id: 'ux-2', title: 'UX Loop: improve country info hierarchy (scan speed)', tags: ['UX Loop', 'Week B'], status: 'Backlog' },
-        { id: 'ux-3', title: 'UX Loop: trust panel usability test (freshness/sources/confidence)', tags: ['UX Loop', 'Week C'], status: 'Backlog' },
+        { id: 'ux-1', title: 'UX Loop: nav clarity pass (home → countries → country)', tags: ['UX Loop', 'Week A'], status: 'Done' },
+        { id: 'ux-2', title: 'UX Loop: improve country info hierarchy (scan speed)', tags: ['UX Loop', 'Week B'], status: 'Done' },
+        { id: 'ux-3', title: 'UX Loop: trust panel usability test (freshness/sources/confidence)', tags: ['UX Loop', 'Week C'], status: 'Ready' },
         { id: 'ux-4', title: 'UX Loop: conversion CTA test (alerts/watchlist)', tags: ['UX Loop', 'Week D'], status: 'Backlog' },
-        { id: 'ux-5', title: 'UX Loop: measure KPI delta and decide keep/iterate/kill', tags: ['UX Loop', 'Measure'], status: 'Backlog' }
+        { id: 'ux-5', title: 'UX Loop: measure KPI delta and decide keep/iterate/kill', tags: ['UX Loop', 'Measure'], status: 'Ready' }
       ]
 
       const loadCards = () => {
